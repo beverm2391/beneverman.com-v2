@@ -1,0 +1,15 @@
+.marginbottom {
+    margin-bottom: 3rem;
+}
+
+.aboutcontainer {
+    width: 60%;
+    margin: auto;
+    transform: translateY(-10%);
+}
+
+.image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

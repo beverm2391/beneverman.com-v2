@@ -1,0 +1,36 @@
+.playfair {
+    font-family: 'Playfair Display';
+    font-weight: 600;
+}
+
+.opensans {
+    font-weight: 400;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerleft {
+    text-align: right;
+    align-items: center;
+}
+
+.containerright {
+    text-align: left;
+    line-height: 1.7;
+}
+
+.line {
+    height: auto;
+    /* border: 1px solid black; */
+    margin-left: 3rem;
+    margin-right: 3rem;
+}

@@ -1,0 +1,26 @@
+:root {
+    /* lm for light mode */
+    --bg-color-lm : #f9f9f9;
+    --text-color-lm : rgb(0, 0, 0);
+    --link-color-lm : #0072f5;
+    --link-color-hover-lm : #001eff;
+
+    /* dm for dark mode */
+    --bg-color-dm : #1a1a1a;
+    --text-color-dm : rgb(255, 255, 255);
+
+    /* spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+
+    /* type scale */
+    /* !https://type-scale.com/ */
+
+    --font-size-hero: 7.594rem;
+    --font-size-h1: 5.063rem;
+    --font-size-h2: 3.375rem;
+    --font-size-h3: 2.25rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1rem;
+}
