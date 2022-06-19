@@ -15,14 +15,14 @@ function Project() {
                         <AiOutlineArrowLeft onClick={ () => router.back() } className={styles.ppicon} size={30}/>
                     </div>
                     <div className={styles.pptitlecontainer}>
-                        <h1>{props.title}</h1>
+                        <h1></h1>
                     </div>
                     <div className={styles.ppimagecontainer}>
-                        <Image src={props.image} alt=""/>
+                        <Image src={img_brain} alt="brain"/>
                     </div>
                 </div>
                 <div className={styles.ppwrapper}>
-                    {props.body}
+                    <p>body</p>
                 </div>
             </section>
         </Layout>

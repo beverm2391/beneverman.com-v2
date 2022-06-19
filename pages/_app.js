@@ -1,5 +1,5 @@
 import '../styles/design_tokens.css'
-import '../styles/globals.css'
+import '../styles/global.css'
 
 export default function MyApp({ Component, pageProps }) {
   // Use the layout defined at the page level, if available

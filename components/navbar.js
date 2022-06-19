@@ -1,6 +1,7 @@
 import styles from '../styles/navbar.module.css';
+import Link from 'next/link';
 
-const links = [
+const linksdata = [
     {id: 1, name: "Home", link: "/"},
     {id: 2, name: "About", link: "/about"},
     {id: 3, name: "Projects", link: "/projects"},
@@ -13,10 +14,12 @@ export default function Navbar() {
             <div className={styles.logo}>
             </div>
             <ul>
-                {links && links.map(({ id, name, link }) => {
+                {linksdata && linksdata.map(({ id, name, link }) => {
                     return ( 
                         <li key={id}>
-                            <a href={link}>{name}</a>
+                            <Link href={link}>
+                                <a>{name}</a>
+                            </Link>
                         </li>
                     )
                 })}
