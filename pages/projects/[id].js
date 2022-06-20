@@ -25,10 +25,7 @@ export async function getStaticPaths() {
 export default function Project({ projectData }) {
     const router = useRouter();
     return (
-        <Layout>
-            <Head>
-                <title>{projectData.title}</title>
-            </Head>
+        <Layout title={projectData.title}>
             <section>
                 <div className={styles.ppgrid}>
                     <div className={styles.ppiconcontainer}>

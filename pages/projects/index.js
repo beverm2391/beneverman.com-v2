@@ -4,6 +4,8 @@ import styles from '../../styles/featuredprojects.module.css';
 import { useRouter } from 'next/router';
 import Line from '../../components/line.js';
 import Link from 'next/link';
+import Image from 'next/image';
+import { MDXRemote } from "next-mdx-remote";
 
 export async function getStaticProps() {
     const allProjectsData = getSortedProjectsData();
@@ -24,23 +26,29 @@ export default function Page({ allProjectsData }) {
                 </div>
 
                 <div className={styles.projectswrapper}>
-                    {allProjectsData.map(({id, title, desc }) => (
-                            <>
-                                <Line/>
-                                <div>
-                                    <Link href={`/projects/${id}`}>
-                                        <a>
-                                            <h3>{title}</h3>
-                                        </a>
-                                    </Link>
+                    {allProjectsData.map(({ id, title, desc, image }) => (
+                        <>
+                            <Line />
+                            <Link href={`/projects/${id}`} passHref className="hoverlink">
+                                <div className={styles.projectscontainer}>
+                                    <h3>{title}</h3>
+                                    
+                                    {image &&
+                                        <div className={styles.imagecontainer}>
+                                            <Image src={image} alt={id} layout='fill' objectFit="conatin"/>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img style={{opacity: 0}} src={image} alt={id} />
+                                        </div>
+                                    }
 
-                                    <p>{desc}</p>
+                                    {desc && <p>{desc}</p>}
                                 </div>
-                            </> 
-                        ))}
-                <Line/>
+                            </Link>
+                        </>
+                    ))}
+                    <Line />
                 </div>
-                
+
             </section>
         </Layout>
     );

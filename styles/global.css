@@ -33,6 +33,7 @@ h2 {
 
 h3 {
   font-size: var(--font-size-h3);
+  font-weight: 600;
 }
 
 h4 {
@@ -62,6 +63,12 @@ a:hover {
 
 p {
   line-height: 1.7rem;
+}
+
+.background {
+  background-color: rgb(255, 253, 246);
+  /* background-image: url('../public/images/background.jpg'); */
+  background-size: cover;
 }
 
 .section{

@@ -19,13 +19,18 @@
 
 .projectswrapper {
     margin: auto;
-    max-width: 1152px;
+    max-width: 900px;
+}
+
+.projectscontainer{
+    width: 100%;
+    cursor: pointer;
 }
 
 .imagecontainer {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
 .fptitle {

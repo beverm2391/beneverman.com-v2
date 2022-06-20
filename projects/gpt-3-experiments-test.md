@@ -1,7 +1,7 @@
 ---
 title: 'GPT-3 Experiments'
 date: '2020-01-01'
-image: '../public/images/projects/brain.jpg'
+image: '/images/projects/brain.jpg'
 desc: This is an article summarizer that is built off the GPT-3 AI from OpenAI.
 ---
 

@@ -6,6 +6,9 @@
     width: 100%; /* Full width */
     float: right;
     z-index: 1;
+
+    /* change visibility */
+    background: transparent;
 }
 
 .navbar ul {
