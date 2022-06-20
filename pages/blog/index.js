@@ -13,22 +13,22 @@ export async function getStaticProps() {
 export default function Page({ allPostsData }) {
     return (
         <Layout title="Blog">
-        <section>
-            <div>
-                <h1>Blog</h1>
-                <ul>
-                    {allPostsData.map(({ id, title, date }) => (
-                        <li key={id}>
-                            {title}
-                            <br />
-                            {id}
-                            <br />
-                            {date}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </section>
+            <section>
+                <div>
+                    <h1>Blog</h1>
+                    <ul>
+                        {allPostsData.map(({ id, title, date }) => (
+                            <li key={id}>
+                                {title}
+                                <br />
+                                {id}
+                                <br />
+                                {date}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
         </Layout>
     );
 }

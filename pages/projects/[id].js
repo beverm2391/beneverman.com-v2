@@ -1,11 +1,28 @@
-import Layout from '../../components/layout';
-import styles from '../../styles/projects.module.css';
-import Image from 'next/image';
-import img_brain from '../../public/images/projects/brain.jpg';
-import { AiOutlineArrowLeft } from 'react-icons/ai'
+import Layout from '../../components/layout.js';
+import { getAllProjectIds, getProjectData } from '../../lib/projects';
 import { useRouter } from 'next/router';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import Image from 'next/image';
+import styles from '../../styles/projects.module.css';
 
-function Project() {
+export async function getStaticProps({ params }) {
+    const projectData = getProjectData(params.id);
+    return {
+        props: {
+            projectData,
+        },
+    };
+}
+
+export async function getStaticPaths() {
+    const paths = getAllProjectIds();
+    return {
+        paths,
+        fallback: false
+    };
+}
+
+export default function Project({ projectData }) {
     const router = useRouter();
     return (
         <Layout>
@@ -15,18 +32,14 @@ function Project() {
                         <AiOutlineArrowLeft onClick={ () => router.back() } className={styles.ppicon} size={30}/>
                     </div>
                     <div className={styles.pptitlecontainer}>
-                        <h1></h1>
+                        <h1>{projectData.title}</h1>
                     </div>
                     <div className={styles.ppimagecontainer}>
-                        <Image src={img_brain} alt="brain"/>
                     </div>
                 </div>
                 <div className={styles.ppwrapper}>
-                    <p>body</p>
                 </div>
             </section>
         </Layout>
     )
 }
-
-export default Project;

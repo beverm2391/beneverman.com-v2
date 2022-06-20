@@ -1,0 +1,1 @@
+These components, "posts" and "projects", are designed to get data from their respective top-level directories. Both directories contain markdown files

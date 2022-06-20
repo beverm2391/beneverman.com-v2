@@ -30,13 +30,15 @@
     /* max-width: 60%;
     margin: auto; */
 
-    margin-top: 1rem;
+    padding-top: 2.5rem;
 
     display: grid;
     grid-template-columns: repeat(2, 10%) 1fr repeat(2, 10%);
     grid-template-rows: repeat(2, 5rem) 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    z-index: 0;
 }
 
 .ppwrapper {

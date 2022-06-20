@@ -1,3 +1,9 @@
+---
+title: 'GPT-3 Experiments'
+date: '2020-01-01'
+image: '../public/images/projects/brain.jpg'
+---
+
 # GPT-3 Experiments
 
 ## Where it all started
