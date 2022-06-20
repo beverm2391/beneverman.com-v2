@@ -2,11 +2,11 @@ import Layout from '../../components/layout.js';
 import { getAllProjectIds, getProjectData } from '../../lib/projects';
 import { useRouter } from 'next/router';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import Image from 'next/image';
 import styles from '../../styles/projects.module.css';
+import Head from 'next/head';
 
 export async function getStaticProps({ params }) {
-    const projectData = getProjectData(params.id);
+    const projectData = await getProjectData(params.id);
     return {
         props: {
             projectData,
@@ -26,6 +26,9 @@ export default function Project({ projectData }) {
     const router = useRouter();
     return (
         <Layout>
+            <Head>
+                <title>{projectData.title}</title>
+            </Head>
             <section>
                 <div className={styles.ppgrid}>
                     <div className={styles.ppiconcontainer}>
@@ -38,6 +41,7 @@ export default function Project({ projectData }) {
                     </div>
                 </div>
                 <div className={styles.ppwrapper}>
+                    <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
                 </div>
             </section>
         </Layout>
