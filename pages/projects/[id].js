@@ -2,7 +2,7 @@ import Layout from '../../components/layout.js';
 import { getAllProjectIds, getProjectData } from '../../lib/projects';
 import { useRouter } from 'next/router';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import styles from '../../styles/projects.module.css';
+import styles from '../../styles/pp.module.css';
 import Head from 'next/head';
 
 export async function getStaticProps({ params }) {

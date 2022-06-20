@@ -1,8 +1,9 @@
 import { getSortedProjectsData } from "../../lib/projects";
 import Layout from "../../components/layout.js";
-import styles from '../../styles/projects.module.css';
-import { AiOutlineArrowLeft } from 'react-icons/ai'
+import styles from '../../styles/featuredprojects.module.css';
 import { useRouter } from 'next/router';
+import Line from '../../components/line.js';
+import Link from 'next/link';
 
 export async function getStaticProps() {
     const allProjectsData = getSortedProjectsData();
@@ -18,35 +19,28 @@ export default function Page({ allProjectsData }) {
     return (
         <Layout title="Projects">
             <section>
-                <div className={styles.ppgrid}>
-                    <div className={styles.ppiconcontainer}>
-                        <AiOutlineArrowLeft onClick={ () => router.back() } className={styles.ppicon} size={30}/>
-                    </div>
-
-                    <div className={styles.pptitlecontainer}>
-                        <h1>Projects</h1>
-                    </div>
-                    
-                    <div className={styles.ppimagecontainer}>
-
-                    </div>
+                <div className={styles.titlecontainer}>
+                    <h1 className={styles.fptitle}>Featured Projects</h1>
                 </div>
 
-                <div className={styles.ppwrapper}>
-                    <ul>
-                        {allProjectsData.map(({ id, title, date, image }) => (
-                            <li key={id}>
-                                {title}
-                                <br />
-                                {id}
-                                <br />
-                                {date}
-                                <br/>   
-                                {image}
-                            </li>
+                <div className={styles.projectswrapper}>
+                    {allProjectsData.map(({id, title, desc }) => (
+                            <>
+                                <Line/>
+                                <div>
+                                    <Link href={`/projects/${id}`}>
+                                        <a>
+                                            <h3>{title}</h3>
+                                        </a>
+                                    </Link>
+
+                                    <p>{desc}</p>
+                                </div>
+                            </> 
                         ))}
-                    </ul>
+                <Line/>
                 </div>
+                
             </section>
         </Layout>
     );
