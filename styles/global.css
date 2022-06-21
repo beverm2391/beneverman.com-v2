@@ -83,16 +83,14 @@ p {
   position: relative;
 }
 
-.herotitle {
-  font-size: var(--font-size-hero);
-  transform: translateY(-10%);
-}
-
 .line {
   border: 0;
   clear: both;
   display: block;
-  width: 90%;
   background-color: var(--text-color-lm);
   height: 1px;
+}
+
+.shiftup {
+  transform: translateY(-10%)
 }

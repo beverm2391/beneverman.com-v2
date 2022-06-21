@@ -1,0 +1,96 @@
+.bloggrid {
+    display: grid;
+    grid-template-columns: 3fr 45% 2fr 20% 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    padding-top: 7rem;
+}
+
+.article {
+    grid-column: 2;
+}
+
+.blogtitlecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogtitle {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.articlecard{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+    background-color: rgba(223, 223, 223, 0);
+    min-height: calc(100px + 2rem);
+
+    cursor: pointer;
+}
+
+.articlesubcard {
+    max-width: 600px;
+}
+
+.articlecardimage {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articlecardtitle {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.articletitle {
+    margin-top: 0;
+    font-size: var(--font-size-h2);
+    font-family: Open Sans;
+}
+
+.blogiconcontainer {
+    grid-column: 1;
+    display: flex;
+    justify-content: right;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.sidebar{
+    grid-column: 4;
+
+    margin-top: 4rem;
+}
+
+.aboutcard{
+    cursor: pointer;
+}
+
+.circleframe {
+    border-radius: 9999px;
+}
+
+.author {
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+}
+
+.sidebararticlecard {
+    background-color: rgb(235, 235, 235);
+    padding: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}

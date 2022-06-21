@@ -1,3 +1,3 @@
-export default function Line() {
+export default function Line(){
     return <hr className="line"/>
 }
