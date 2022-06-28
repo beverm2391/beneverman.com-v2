@@ -1,0 +1,18 @@
+.explorebutton {
+    margin-top: 4rem;
+    padding: 1rem;
+
+    font-size: var(--font-size-h3);
+
+    border: 2px solid #000;
+    border-radius: 10px;
+
+    color: var(--text-color-lm);
+    
+}
+
+.explorebutton:hover {
+    color: var(--link-color-lm);
+    border: 2px solid var(--link-color-lm);
+    cursor: pointer;
+}

@@ -1,8 +1,8 @@
 .inactive {
     background:
         linear-gradient(to right,
-            rgb(255, 255, 255),
-            rgb(255, 255, 255)),
+            rgb(255, 255, 255, 0),
+            rgb(255, 255, 255, 0)),
         linear-gradient(to right,
             rgba(255, 0, 0, 1),
             rgba(255, 0, 180, 1),
@@ -18,8 +18,8 @@
 
     background:
         linear-gradient(to right,
-            rgb(255, 255, 255),
-            rgb(255, 255, 255)),
+            rgb(255, 255, 255, 0),
+            rgb(255, 255, 255, 0)),
         linear-gradient(to right,
             rgba(255, 0, 0, 1),
             rgba(255, 0, 180, 1),

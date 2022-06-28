@@ -1,5 +1,4 @@
 .navbar {
-    background-color:  var(--bg-color-lm);
     /* change visibility */
     background: transparent;
     padding-top: 1.5rem;
@@ -110,12 +109,13 @@
         transform: translateX(100%);
         transition: 0.4s;
     }
-}
 
-/* firefox doesnt support backdrop filter, so this query says to use it if the browser supports, otherwise fallback*/
-@supports (backdrop-filter: blur(1rem)) {
+    /* firefox doesnt support backdrop filter, so this query says to use it if the browser supports, otherwise fallback*/
+    @supports (backdrop-filter: blur(1rem)) {
     .primarynavigation {
         background: hsl(0 0% 100% / 0.7);
         backdrop-filter: blur(1rem);
     }
 }
+}
+

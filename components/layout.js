@@ -1,4 +1,3 @@
-import Navbar from './navbar.js';
 import Footer from './footer.js';
 import FadeIn from './animations/fadein.js';
 import Head from 'next/head';
@@ -9,9 +8,9 @@ export default function Layout({ title, children }) {
         <>
             <Head>
                 <link rel="icon" href="/favicon.png"/>
-            </Head>
-            <div className="backgroundlm">
                 <title>{title}</title>
+            </Head>
+            <div className="gradientbackgroundlm">
                 <NavbarResponsive />
                     <FadeIn>
                         <main>{children}</main>

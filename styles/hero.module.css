@@ -2,7 +2,7 @@
     font-size: var(--font-size-hero);
     margin: 0;
     line-height: var(--font-size-hero);
-    position: absolute;
+    /* position: absolute; */
     padding-bottom: 1rem;
     padding-left: 10px;
 
@@ -27,9 +27,38 @@
 .herocontainer {
     display: flex;
     flex-direction: column;
+}
+
+.typewritercontainer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+}
+
+.typewriter {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--font-size-h3);
+}
+
+.typewritercursor {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--font-size-h3);
+    -webkit-animation: blink-animation 1s steps(10, start) infinite;
+    animation: blink-animation 1s steps(10, start) infinite;
+    margin-left: 1px;
+}
+
+@keyframes blink-animation {
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
 
 .titlecontainer {
@@ -38,19 +67,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 
     overflow: visible;
-}
-
-.iconcontainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
 }
 
 /* Button stuff */
