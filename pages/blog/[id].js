@@ -8,7 +8,6 @@ import profilepic from '../../public/images/profilepic.jpg';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useRouter } from 'next/router';
-import AnimationFadeIn from '../../components/animationfadein.js';
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id);
@@ -39,9 +38,9 @@ export default function Post({ postData, allPostsData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <section>
+            <section className="sectionpadded">
 
-                <div className={styles.bloggrid}>
+                <div className={styles.blogpagegrid}>
                         <div className={styles.blogiconcontainer}>
                             <AiOutlineArrowLeft onClick={() => router.back()} className={styles.ppicon} size={30} />
                         </div>
@@ -67,7 +66,6 @@ export default function Post({ postData, allPostsData }) {
 
                         <h5>More From Me</h5>
 
-                        <AnimationFadeIn>
                             <div className={styles.morearticles}>
                                 {allPostsDataExcept.map(({ id, title }) => (
                                     <Link href={`/blog/${id}`} key={id}>
@@ -77,7 +75,6 @@ export default function Post({ postData, allPostsData }) {
                                     </Link>
                                 ))}
                             </div>
-                        </AnimationFadeIn>
                     </div>
                 </div>
 

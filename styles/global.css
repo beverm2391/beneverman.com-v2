@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif, 'Playfair Display', serif;
   font-size: 100%;
+
+  overflow-x: hidden;
 }
 
 *,
@@ -24,6 +26,8 @@ h1 {
   font-family: 'Playfair Display';
   font-weight: 600;
   font-size: var(--font-size-h1);
+
+  margin-top: 0;
 }
 
 h2 {
@@ -33,15 +37,17 @@ h2 {
 
 h3 {
   font-size: var(--font-size-h3);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h4 {
   font-size: var(--font-size-h4);
+  font-weight: 400;
 }
 
 h5 {
   font-size: var(--font-size-h5);
+  font-weight: 400;
 }
 
 h6 {
@@ -58,23 +64,103 @@ a {
 }
 
 a:hover {
-  cursor : pointer;
+  cursor: pointer;
 }
 
 p {
   line-height: 1.7rem;
 }
 
-.background {
-  background-color: rgb(255, 253, 246);
-  /* background-image: url('../public/images/background.jpg'); */
-  background-size: cover;
+u {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
-.section{
-  height: 100vh;
+.backgroundlm {
+  background-color: rgb(255, 255, 255);
+}
+
+.backgroundimagelm {
+  background-image: url('../public/images/backgroundlm.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.gradientbackgroundlm {
+  background-image: url('../public/images/backgroundlm.jpg');
+  background: linear-gradient(270deg rgba(255, 246, 235, 0.1), rgb(255, 255, 255, .1));
+  background-size: 400% 400%;
+
+  -webkit-animation: gradient 30s ease infinite;
+  -moz-animation: gradient 30s ease infinite;
+  animation: gradient 30s ease infinite;
+}
+
+.gradientbackgrounddm {
+  background-image: url('../public/images/backgrounddm.jpg');
+  background: linear-gradient(270deg rgba(255, 246, 235, 0.1), rgb(255, 255, 255, .1));
+  background-size: 400% 400%;
+
+  -webkit-animation: gradient 30s ease infinite;
+  -moz-animation: gradient 30s ease infinite;
+  animation: gradient 30s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.sectionpadded {
+  min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  padding-top: var(--section-top-padding)
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -93,4 +179,125 @@ p {
 
 .shiftup {
   transform: translateY(-10%)
+}
+
+.animationcontainer {
+  margin: 0;
+}
+
+.animation {
+  position: relative;
+  transition: 0.5s;
+}
+
+.icon {
+  margin-right: 1rem;
+  padding: 0;
+}
+
+/* .animation:hover {
+  filter: blur(2px);
+} */
+
+/* Button Stuff */
+
+.form {
+  display: flex;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+input+label {
+  outline: 2px solid transparent;
+  transform: scale(1, 1);
+  transition: outline 0.25s ease, transform 0.15s ease;
+}
+
+input:focus+label {
+  outline: 2px solid var(--focus);
+}
+
+input:active+label {
+  transform: scale(1.05);
+}
+
+.gradientunderline {
+  transition: all 1s;
+
+  background:
+    linear-gradient(to right,
+      rgb(255, 255, 255),
+      rgb(255, 255, 255)),
+    linear-gradient(to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+
+}
+
+.gradientunderline:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* !Change button size with -w var */
+label {
+  --w: 4rem;
+  --h: calc(var(--w) / 2);
+  --br: calc(var(--w) / 1);
+  position: relative;
+  background: var(--white);
+  display: block;
+  width: var(--w);
+  height: var(--h);
+  border-radius: var(--br);
+  box-shadow: 0px calc(var(--w) / 7.5) calc(var(--w) / 3.75) 0px rgba(51, 51, 51, 0.1);
+  cursor: pointer;
+  text-indent: 200vw;
+  overflow: hidden;
+  --size: calc(var(--w) / 3);
+  --offset: calc(var(--w) / 12);
+}
+
+label::before,
+label::after {
+  content: "";
+  position: absolute;
+}
+
+label::before {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--coal);
+  left: 0px;
+  top: 50%;
+  transform: translate(var(--offset), -50%);
+  box-shadow: calc(var(--w) - calc(var(--offset) * 2) - var(--size)) 0px 0px var(--white);
+  z-index: 1;
+}
+
+label::after {
+  width: var(--size);
+  height: var(--size);
+  left: 0;
+  top: 50%;
+  background: var(--coal);
+  transform: translate(-100%, -50%) scale(1);
+  transform-origin: left;
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+input:checked+label::after {
+  transform: translate(-100%, -50%) scale(5);
 }

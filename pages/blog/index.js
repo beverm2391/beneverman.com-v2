@@ -6,7 +6,6 @@ import styles from "../../styles/blog.module.css";
 import Image from "next/image";
 import profilepic from "../../public/images/profilepic.jpg";
 import Line from "../../components/line.js";
-import AnimationFadeIn from "../../components/animationfadein";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -21,9 +20,8 @@ export default function Page({ allPostsData }) {
     return (
 
         <Layout title="Blog">
-            <AnimationFadeIn>
-                <section>
-                    <div className={styles.bloggrid}>
+                <section className="sectionpadded">
+                    <div className={styles.blogindexgrid}>
 
                         <div className={styles.article}>
                             <div className={styles.blogtitlecontainer}>
@@ -41,9 +39,9 @@ export default function Page({ allPostsData }) {
                                                     <Date dateString={date} />
                                                 </small>
                                             </div>
-                                            <div className={styles.articlecardimage}>
-                                                {image && <Image src={image} alt="Ben Everman" height={100} width={100} />}
-                                            </div>
+                                                <div className={styles.articlecardimage}>
+                                                    {image && <Image src={image} alt="Ben Everman" height={100} width={100} />}
+                                                </div>
                                         </div>
                                     </Link>
                                     <Line />
@@ -51,7 +49,7 @@ export default function Page({ allPostsData }) {
                             ))}
 
                         </div>
-                        <div className={styles.sidebar}>
+                        {/* <div className={styles.sidebar}>
                             <Link href="/about">
                                 <div className={styles.aboutcard}>
                                     <Image src={profilepic} className={styles.circleframe} alt="Ben Everman" height={100} width={100} />
@@ -59,10 +57,9 @@ export default function Page({ allPostsData }) {
                                     <p>Social Work Student | MBA Student | Developer</p>
                                 </div>
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
-            </AnimationFadeIn>
         </Layout>
     );
 }

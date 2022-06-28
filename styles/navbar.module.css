@@ -11,6 +11,15 @@
     background: transparent;
 }
 
+.navbarhome {
+    overflow: hidden;
+    background-color:  var(--bg-color-lm);
+    position: absolute;
+    width: 100%;
+    float: right;
+    z-index: 1;
+}
+
 .navbar ul {
     float: right;
     list-style-type: none;
@@ -31,7 +40,7 @@
 }
 
 .navbar a:hover{
-    color: var(--link-color-hover-lm);
+    color: var(--link-color-lm);
     transition: ease-in 0.2s;
 }
 
@@ -39,4 +48,5 @@
     float: left;
     margin-left: 2rem;
     margin-top: .5rem;
+    padding: 1rem 2rem;
 }

@@ -1,9 +1,9 @@
 import Layout from '../../components/layout.js';
-import { getAllProjectIds, getProjectData } from '../../lib/projects';
+import { getAllProjectIds, getProjectData } from '../../lib/projects.js';
 import { useRouter } from 'next/router';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import styles from '../../styles/pp.module.css';
-import Head from 'next/head';
+import styles from '../../styles/projectpage.module.css';
+import Image from 'next/image';
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id);
@@ -24,21 +24,27 @@ export async function getStaticPaths() {
 
 export default function Project({ projectData }) {
     const router = useRouter();
+
     return (
         <Layout title={projectData.title}>
-            <section>
-                <div className={styles.ppgrid}>
-                    <div className={styles.ppiconcontainer}>
-                        <AiOutlineArrowLeft onClick={ () => router.back() } className={styles.ppicon} size={30}/>
-                    </div>
-                    <div className={styles.pptitlecontainer}>
-                        <h1>{projectData.title}</h1>
-                    </div>
-                    <div className={styles.ppimagecontainer}>
-                    </div>
-                </div>
+            <section className="sectionpadded">
                 <div className={styles.ppwrapper}>
-                    <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+                    <div className={styles.ppcontainer}>
+
+                        <div className={styles.pptitlecontainer}>
+                            <h1 className={styles.pptitle}>{projectData.title}</h1>
+                            <div className={styles.ppiconcontainer}>
+                                <AiOutlineArrowLeft onClick={() => router.back()} className={styles.ppicon} size={30} />
+                            </div>
+                        </div>
+                        {projectData.image ?
+                            <div className={styles.ppimagecontainer}>
+                                <Image src={projectData.image} alt={projectData.id} width={projectData.width} height={projectData.height} />
+                            </div> :
+                            <div className={styles.spacer}></div>
+                        }
+                        <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+                    </div>
                 </div>
             </section>
         </Layout>

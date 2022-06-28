@@ -1,0 +1,18 @@
+.contactcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacttitle {
+    margin: 1rem;
+}
+
+.iconcontainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

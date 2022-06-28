@@ -1,0 +1,121 @@
+.navbar {
+    background-color:  var(--bg-color-lm);
+    /* change visibility */
+    background: transparent;
+    padding-top: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* legacy: .navbar ul */
+.primarynavigation {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    float: right;
+
+    gap: var(--gap, 4rem);
+    padding-right: var(--gap, 4rem);
+
+    margin: 0;
+    z-index: 1000;
+}
+
+.mobilenavtoggle{
+    display: none;
+}
+
+.navbar a {
+    color: var(--text-color-lm);
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: var(--link-color-lm);
+    transition: ease-in 0.2s;
+}
+
+.logo {
+    float: left;
+    padding-left: var(--gap, 4rem);
+}
+
+.toggleopen {
+    background: url(/menuclose.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.1s
+}
+
+.toggleclosed {
+    background: url(/hamburgermenu.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transition: 0.1s
+}
+
+@media (min-width: 35em) and (max-width: 55em) {
+    .primarynavigation {
+        --gap: 3em;
+    }
+    .logo {
+        --gap: 3em;
+    }
+}
+
+@media (max-width: 40em) {
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 35em) {
+    .primarynavigation {
+        --gap : 2em;
+
+        position: fixed;
+        inset: 0 0 0 38%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        background: hsl(0 0% 95% / 1);
+    }
+
+    .logo {
+        --gap: 2em;
+    }
+
+    .mobilenavtoggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        border: none;
+    }
+
+    .menuopen {
+        transform: translateX(0%);
+        transition: 0.4s;
+    }
+    
+    .menuclosed {
+        transform: translateX(100%);
+        transition: 0.4s;
+    }
+}
+
+/* firefox doesnt support backdrop filter, so this query says to use it if the browser supports, otherwise fallback*/
+@supports (backdrop-filter: blur(1rem)) {
+    .primarynavigation {
+        background: hsl(0 0% 100% / 0.7);
+        backdrop-filter: blur(1rem);
+    }
+}

@@ -30,12 +30,12 @@
 .imagecontainer {
     position: relative;
     width: 100%;
+    height: 100%;
     margin-bottom: 3rem;
 }
 
 .fptitle {
     margin-bottom: 3rem;
-    margin-top: 7rem;
 }
 
 /* Project Page (pp stands for project page)*/
