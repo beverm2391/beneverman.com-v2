@@ -50,6 +50,7 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 }
 
 /* Button stuff */

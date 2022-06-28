@@ -11,7 +11,6 @@ import Hero from '../components/hero'
 import { BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs'
 
 export default function Page() {
-  const iconsize = 20
   return (
     <section className="section">
       <div className="wrapper">
@@ -22,11 +21,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className={styles.iconcontainer}>
-          <a href=''><BsTwitter className="icon" size={iconsize} color={'#1DA1F2'} /></a>
-          <a href=''><BsLinkedin className="icon" size={iconsize} color={'#0e76a8'} /></a>
-          <a href=''><BsGithub className="icon" size={iconsize} color={'#171515'} /></a>
-        </div>
     </section>
   )
 }
