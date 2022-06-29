@@ -42,6 +42,11 @@
     position: relative;
     /* margin-bottom: 3rem; */
     min-height: 5rem;
+    margin-top: 2rem;
+}
+
+.justtitle {
+    position: relative;
 }
 
 .titlecard {

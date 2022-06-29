@@ -211,6 +211,22 @@ u {
   padding: 0;
 }
 
+.counter {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+.scrollcontainerouter{
+  height: 100vh;
+  overflow: scroll;
+}
+
+.scrollcontainerinner{
+  height: 200%;
+  position: relative;
+}
 /* .animation:hover {
   filter: blur(2px);
 } */

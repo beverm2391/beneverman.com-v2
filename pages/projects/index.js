@@ -29,14 +29,14 @@ export default function Page({ allProjectsData }) {
             <div className={styles.projectswrapper}>
                 {allProjectsData.map(({ id, title, desc, image, width, height }) => (
                     <>
-                        <div style={{ height: '0px', width: '90%' }}>
+                        <div style={{ height: '0px', width: '100%', opacity: .5}}>
                             <Line />
                         </div>
                         {/* generate link to project page */}
                         <Link href={`/projects/${id}`} passHref className="hoverlink">
                             <div className={styles.projectscontainer}>
 
-                                <div className={styles.imageandtitle}>
+                                <div className={image ? `${styles.imageandtitle}` : `${styles.justtitle}`}>
                                     {/* If theres an image, format with the title card, otherwise, format normal */}
                                     {image && 
                                         <div className={styles.imagecontainer}>
