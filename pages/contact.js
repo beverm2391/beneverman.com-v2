@@ -9,7 +9,7 @@ export default function Page() {
             <section className="section">
                 <div className="wrapper">
                     <div className={styles.contactcontainer}>
-                        <h1 className={styles.contacttitle}>Contact Me</h1>
+                        <h2 className={styles.contacttitle}>Interested in working together? Don't hesitate to reach out.</h2>
                         <a href="mailto:contact@beneverman.com"><h4 className={linkstyles.linkunderline}>contact@beneverman.com</h4></a>
                         <div className={styles.iconcontainer}>
                             <a href=''><BsTwitter className="icon" size={30} color={'#1DA1F2'} /></a>
