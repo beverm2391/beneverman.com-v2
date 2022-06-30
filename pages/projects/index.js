@@ -30,44 +30,41 @@ export default function Page({ allProjectsData }) {
             <div className={styles.projectswrapper}>
                 {allProjectsData.map(({ id, title, desc, image, width, height }) => (
                     <>
-
                         {/* generate link to project page */}
-
-                        <Fade delay={200}>
-                            <Link href={`/projects/${id}`} passHref className="hoverlink">
-                                <div>
-                                    <div style={{ height: '1.5px', width: '100%', opacity: .5 }}>
-                                        <Line />
-                                    </div>
-                                    <div className={styles.projectscontainer}>
-                                        <div className={image ? `${styles.imageandtitle}` : `${styles.justtitle}`}>
-                                            {/* If theres an image, format with the title card, otherwise, format normal */}
-                                            {image &&
-                                                <div className={styles.imagecontainer}>
-                                                    <Image src={image} alt={id} width={width} height={height} />
-                                                </div>
-                                            }
-                                            {/* Pick the class depending on if theres an image or not */}
-                                            <div className={image ? `${styles.titlecard}` : `${styles.titlecardrelative}`}>
-                                                <h3 className={styles.projecttitle}>{title}</h3>
-                                            </div>
+                        <div style={{ height: '1.5px', width: '100%', opacity: .5 }}>
+                            <Line />
+                        </div>
+                        <Link href={`/projects/${id}`} passHref className="hoverlink">
+                            <div className={styles.projectscontainer}>
+                                <Fade delay={500}>
+                                <div className={image ? `${styles.imageandtitle}` : `${styles.justtitle}`}>
+                                    {/* If theres an image, format with the title card, otherwise, format normal */}
+                                    {image &&
+                                        <div className={styles.imagecontainer}>
+                                            <Image src={image} alt={id} width={width} height={height} />
                                         </div>
-                                        {desc &&
-                                            <div className={image ? styles.descriptionimage : styles.description}>
-                                                <p>{desc}</p>
-                                            </div>}
+                                    }
+                                    {/* Pick the class depending on if theres an image or not */}
+                                    <div className={image ? `${styles.titlecard}` : `${styles.titlecardrelative}`}>
+                                        <h3 className={styles.projecttitle}>{title}</h3>
                                     </div>
                                 </div>
-                            </Link>
-                        </Fade>
-
+                                </Fade>
+                                <Fade>
+                                {desc &&
+                                    <div className={image ? styles.descriptionimage : styles.description}>
+                                        <p>{desc}</p>
+                                    </div>}
+                                </Fade>
+                            </div>
+                        </Link>
                     </>
                 )
                 )}
                 <Line />
             </div>
 
-        </section>
+        </section >
     );
 }
 
