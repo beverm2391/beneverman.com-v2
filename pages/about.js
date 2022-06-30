@@ -6,6 +6,7 @@ import GradientUnderline from "../components/animations/gradientunderline"
 import { FiArrowUpRight } from "react-icons/fi"
 import linkstyles from '../styles/linkunderline.module.css';
 import MyStory from "../components/mystory"
+import Fade from "react-reveal/Fade"
 
 export default function Page() {
     return (
@@ -25,7 +26,9 @@ export default function Page() {
                     {/* <Image src={me} alt='Picture of me' className={styles.imageofme}/> */}
             </div>
         </section>
-        <MyStory />
+        <Fade delay={500}>
+            <MyStory />
+        </Fade>
         </>
     )
 }

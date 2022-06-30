@@ -25,7 +25,8 @@
 .projectscontainer{
     width: 100%;
     cursor: pointer;
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -43,13 +44,24 @@
     /* margin-bottom: 3rem; */
     min-height: 5rem;
     margin-top: 2rem;
+
+    transition: ease-out 0.3s;
 }
+
+/* .imageandtitle:hover {
+    transition: ease-out 0.3s;
+    transform: scale(1.01);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+} */
 
 .justtitle {
     position: relative;
+    left: 0;
+    width: 100%;
 }
 
 .titlecard {
+    --scale : .05;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -59,13 +71,22 @@
     font-family: "Playfair Display";
     font-weight: 500;
     box-shadow: 0px 0px 10px rgba(135, 135, 135, 0.1);
+
+    transition: ease-out 0.3s;
+}
+
+.titlecard:hover {
+    transition: ease-out 0.3s;
+    transform: rotate(2deg) translateY(-10px) scale(1.04);
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .titlecardrelative {
     position: relative;
     font-family: "Playfair Display";
     font-weight: 500;
-    box-shadow: 0px 0px 10px rgba(135, 135, 135, 0.1);
+    padding-bottom: 1rem;
 }
 
 .fptitle {
@@ -74,11 +95,39 @@
 
 .projecttitle {
     font-weight: 500;
-    margin: 0
+    margin: 0;
+    width: 100%;
+}
+
+.descriptionimage {
+    font-weight: 400;
+    margin-top: 3rem;
 }
 
 .description {
-    margin-top: 3rem;
+    margin-top: 1rem;
+}
+
+.iconcontainer{
+    position: relative;
+    height: 0px;
+    transform: translateY(-8px);
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 1rem;
+    opacity: .7;
+
+    transition: ease-out 0.2s;
+}
+
+.icon:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: ease-out 0.2s;
 }
 
 /* Project Page (pp stands for project page)*/

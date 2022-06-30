@@ -4,7 +4,7 @@ import mystoryimage from '../public/images/mystory.png'
 
 export default function MyStory() {
     return (
-        <section className="sectionpadded">
+        <section className="section">
             <div className={styles.container}>
                 <h1>Why I Do It</h1>
                 {/* <div className={styles.row}>
