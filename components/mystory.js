@@ -19,7 +19,7 @@ export default function MyStory() {
                 </div> */}
                 <div className={styles.textcontainer}>
                     <p className={styles.mystorytext}>
-                        I have spent the past eight years living with mental illness. I’ve been diagnosed with treatment-resistant depression (non-responsive to pharmacology), OCD, and generalized anxiety disorder, among other things.
+                        I have spent the past eight years living with mental illness. I&#39;ve been diagnosed with treatment-resistant depression (non-responsive to pharmacology), OCD, and generalized anxiety disorder, among other things.
                     </p>
                     <p>
                         The treatment-resistant nature of the depression forced me to seek out more intense interventions such as Electroconvulsive Therapy (ECT) and Transcranial Magnetic Stimulation (TMS). Since I have had access to the care I need, I have been in complete remission for about two and a half years.
