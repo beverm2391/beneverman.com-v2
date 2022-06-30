@@ -8,7 +8,7 @@ export default function  AboutIntro() {
                 <div className={styles.container}>
                     <div className={styles.container2}>
                         <div className={styles.containerleft}>
-                            <h4 className={styles.opensans}>I'm a...</h4>
+                            <h4 className={styles.opensans}>I&#39;m a...</h4>
                         </div>
                         <div className={styles.containerleft}>
                             <h4 className={styles.opensans}>working towards...</h4>
