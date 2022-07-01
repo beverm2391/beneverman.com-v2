@@ -37,6 +37,18 @@
     width: 70%;
     height: 70%;
     margin-bottom: 3rem;
+
+    transition: ease-out 0.3s;
+}
+
+.imagecontainer:hover {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    margin-bottom: 3rem;
+
+    /* transform: scale(1.02); */
+    transition: ease-out 0.3s;
 }
 
 .imageandtitle {
@@ -68,8 +80,7 @@
     background-color: var(--card-bg-lm);
     backdrop-filter: blur(5px);
     padding: 2rem 2rem;
-    font-family: "Playfair Display";
-    font-weight: 500;
+    font-family: var(--font-primary);
     box-shadow: 0px 0px 10px rgba(135, 135, 135, 0.1);
 
     transition: ease-out 0.3s;
@@ -84,8 +95,7 @@
 
 .titlecardrelative {
     position: relative;
-    font-family: "Playfair Display";
-    font-weight: 500;
+    font-family: var(--font-primary);
     padding-bottom: 1rem;
 }
 

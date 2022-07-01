@@ -6,9 +6,10 @@
     padding-bottom: 1rem;
     padding-left: 10px;
 
-    /* font-family: Helvetica; */
-    font-weight: 600;
+    font-family: var(--font-primary);
+    font-weight: var(--header-weight);
     color: var(--text-color-lm);
+    letter-spacing: var(--letter-spacing);
     z-index: 2;
 
     transition: all 0.5s;
@@ -38,12 +39,12 @@
 }
 
 .typewriter {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-secondary);
     font-size: var(--font-size-h3);
 }
 
 .typewritercursor {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-secondary);
     font-size: var(--font-size-h3);
     -webkit-animation: blink-animation 1s steps(10, start) infinite;
     animation: blink-animation 1s steps(10, start) infinite;

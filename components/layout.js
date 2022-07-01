@@ -12,7 +12,7 @@ export default function Layout({ title, children}) {
                 <link rel="icon" href="/favicon.png" />
                 <title>{title}</title>
             </Head>
-            <div className={backgrounds[1]}>
+            <div className={backgrounds[0]}>
                 <NavbarResponsive />
                 {/* <FadeIn> */}
                     <main>{children}</main>

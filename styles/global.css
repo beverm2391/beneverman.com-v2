@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif, 'Playfair Display', serif;
+  font-family: var(--font-secondary), var(--font-primary);
   font-size: 100%;
 
   overflow-x: hidden;
@@ -23,8 +23,8 @@ h1 {
   color: var(--text-color);
   font-size: var(--font-size-lg);
 
-  font-family: 'Playfair Display';
-  font-weight: 600;
+  font-family: var(--font-primary);
+  font-weight: var(--header-weight);
   font-size: var(--font-size-h1);
 
   margin-top: 0;
@@ -69,6 +69,7 @@ a:hover {
 
 p {
   line-height: 1.7rem;
+  font-family: var(--font-secondary);
 }
 
 u {
@@ -83,7 +84,7 @@ u {
 }
 
 .backgroundlm {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-color-lm);
 }
 
 .backgroundimagelm {
@@ -119,9 +120,9 @@ u {
 
 
 .gradientbackgrounddm {
-  background: #0F2027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #3E5151;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
   /* background-size: 400% 400%;
 

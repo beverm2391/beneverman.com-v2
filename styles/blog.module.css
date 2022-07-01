@@ -60,7 +60,7 @@
 }
 
 .articlecardtitle {
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -68,7 +68,7 @@
 .articletitle {
     margin-top: 0;
     font-size: var(--font-size-h2);
-    font-family: Open Sans;
+    font-family: var(--font-primary);
 }
 
 .blogiconcontainer {
