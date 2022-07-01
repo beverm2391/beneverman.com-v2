@@ -1,15 +1,16 @@
+/* link styling */
 
-.linkunderline {
+.markdown a {
     display: inline-block;
     position: relative;
-    color: var(--text-color-lm);
+    color: var(--link-color-lm);
 }
 
-.linkunderline:hover {
+.markdown a:hover {
     color: var(--link-hover-color-lm);
 }
 
-.linkunderline:after {
+.markdown a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -22,7 +23,7 @@
     transition: transform 0.25s ease-out;
 }
 
-.linkunderline:hover:after {
+.markdown a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

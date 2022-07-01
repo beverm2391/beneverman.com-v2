@@ -32,7 +32,7 @@
 }
 
 .navbar a:hover{
-    color: var(--link-color-lm);
+    color: var(--link-hover-color-lm);
     transition: ease-in 0.2s;
 }
 

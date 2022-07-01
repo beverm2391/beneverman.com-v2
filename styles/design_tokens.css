@@ -2,7 +2,8 @@
     /* lm for light mode */
     --bg-color-lm: #f9f9f9;
     --text-color-lm: rgb(0, 0, 0);
-    --link-color-lm: #0072f5;
+    --link-color-lm: #001eff;
+    --link-hover-color-lm: #0072f5;
 
     /* dm for dark mode */
     --bg-color-dm: #1a1a1a;

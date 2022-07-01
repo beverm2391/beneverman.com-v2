@@ -5,6 +5,7 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import styles from '../../styles/projectpage.module.css';
 import Image from 'next/image';
 import FadeIn from '../../components/animations/fadein.js';
+import markdownstyles from '../../styles/markdown.module.css';
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id);
@@ -45,7 +46,7 @@ export default function Project({ projectData }) {
                                 </div> :
                                 <div className={styles.spacer}></div>
                             }
-                            <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+                            <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} className={markdownstyles.markdown}/>
                         </div>
                     </div>
                 </section>
