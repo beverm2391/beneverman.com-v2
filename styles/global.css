@@ -78,6 +78,10 @@ u {
 
 /* ! Backgrounds */
 
+.backgrounddm {
+  background-color: var(--bg-color-dm);
+}
+
 .backgroundlm {
   background-color: rgb(255, 255, 255);
 }
@@ -99,7 +103,12 @@ u {
 }
 
 .gradientbackgroundlm {
-  background: linear-gradient(90deg, rgba(255,59,59,1) 35%, rgba(90,70,255,1) 100%);
+  /* background: linear-gradient(90deg, rgba(255, 59, 59, 1) 35%, rgba(90, 70, 255, 1) 100%); */
+
+  background: #56ab2f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   background-size: 400% 400%;
 
   -webkit-animation: gradient 30s ease infinite;
@@ -107,14 +116,18 @@ u {
   animation: gradient 30s ease infinite;
 }
 
+
+
 .gradientbackgrounddm {
-  background-image: url('../public/images/backgrounddm.jpg');
-  background: linear-gradient(deg rgba(255, 246, 235, 0.1), rgb(255, 255, 255, .1));
-  background-size: 400% 400%;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  /* background-size: 400% 400%;
 
   -webkit-animation: gradient 30s ease infinite;
   -moz-animation: gradient 30s ease infinite;
-  animation: gradient 30s ease infinite;
+  animation: gradient 30s ease infinite; */
 }
 
 @-webkit-keyframes gradient {
@@ -218,15 +231,16 @@ u {
 
 }
 
-.scrollcontainerouter{
+.scrollcontainerouter {
   height: 100vh;
   overflow: scroll;
 }
 
-.scrollcontainerinner{
+.scrollcontainerinner {
   height: 200%;
   position: relative;
 }
+
 /* .animation:hover {
   filter: blur(2px);
 } */

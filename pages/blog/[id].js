@@ -8,6 +8,7 @@ import profilepic from '../../public/images/profilepic.jpg';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { useRouter } from 'next/router';
+import Fade from 'react-reveal/Fade';
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id);
@@ -38,9 +39,10 @@ export default function Post({ postData, allPostsData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <section className="sectionpadded">
+            <Fade delay={200}>
+                <section className="sectionpadded">
 
-                <div className={styles.blogpagegrid}>
+                    <div className={styles.blogpagegrid}>
                         <div className={styles.blogiconcontainer}>
                             <AiOutlineArrowLeft onClick={() => router.back()} className={styles.ppicon} size={30} />
                         </div>
@@ -54,17 +56,17 @@ export default function Post({ postData, allPostsData }) {
                             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
                         </div>
 
-                    <div className={styles.sidebar}>
+                        <div className={styles.sidebar}>
 
-                        <Link href="/about">
-                            <div className={styles.aboutcard}>
-                                <Image src={profilepic} className={styles.circleframe} alt="Ben Everman" height={100} width={100} />
-                                <h4 className={styles.author}>Ben Everman</h4>
-                                <p>Social Work Student | MBA Student | Developer</p>
-                            </div>
-                        </Link>
+                            <Link href="/about">
+                                <div className={styles.aboutcard}>
+                                    <Image src={profilepic} className={styles.circleframe} alt="Ben Everman" height={100} width={100} />
+                                    <h4 className={styles.author}>Ben Everman</h4>
+                                    <p>Social Work Student | MBA Student | Developer</p>
+                                </div>
+                            </Link>
 
-                        <h5>More From Me</h5>
+                            <h5>More From Me</h5>
 
                             <div className={styles.morearticles}>
                                 {allPostsDataExcept.map(({ id, title }) => (
@@ -75,10 +77,11 @@ export default function Post({ postData, allPostsData }) {
                                     </Link>
                                 ))}
                             </div>
+                        </div>
                     </div>
-                </div>
 
-            </section>
+                </section>
+            </Fade>
         </Layout>
     );
 }

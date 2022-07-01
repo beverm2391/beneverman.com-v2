@@ -1,7 +1,10 @@
 :root {
     /* lm for light mode */
     --bg-color-lm: #f9f9f9;
-    --text-color-lm: rgb(0, 0, 0);
+    --card-bg-lm: rgba(106, 106, 106, 0.3);
+
+    --text-color-lm: rgb(255, 255, 255);
+
     --link-color-lm: #001eff;
     --link-hover-color-lm: #0072f5;
 

@@ -6,6 +6,7 @@ import styles from "../../styles/blog.module.css";
 import Image from "next/image";
 import profilepic from "../../public/images/profilepic.jpg";
 import Line from "../../components/line.js";
+import Fade from "react-reveal/Fade";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -20,6 +21,7 @@ export default function Page({ allPostsData }) {
     return (
 
         <Layout title="Blog">
+            <Fade delay={200}>
                 <section className="sectionpadded">
                     <div className={styles.blogindexgrid}>
 
@@ -60,6 +62,7 @@ export default function Page({ allPostsData }) {
                         </div> */}
                     </div>
                 </section>
+            </Fade>
         </Layout>
     );
 }

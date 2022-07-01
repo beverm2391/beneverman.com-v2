@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import styles from '../../styles/projectpage.module.css';
 import Image from 'next/image';
-import FadeIn from '../../components/animations/fadein.js';
+import Fade from 'react-reveal/Fade';
 import markdownstyles from '../../styles/markdown.module.css';
 
 export async function getStaticProps({ params }) {
@@ -29,7 +29,7 @@ export default function Project({ projectData }) {
 
     return (
         <Layout title={projectData.title}>
-            <FadeIn>
+            <Fade delay={200}>
                 <section className="sectionpadded">
                     <div className={styles.ppwrapper}>
                         <div className={styles.ppcontainer}>
@@ -50,7 +50,7 @@ export default function Project({ projectData }) {
                         </div>
                     </div>
                 </section>
-            </FadeIn>
+            </Fade>
         </Layout>
     )
 }

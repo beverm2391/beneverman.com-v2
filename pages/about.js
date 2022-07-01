@@ -11,6 +11,7 @@ import Fade from "react-reveal/Fade"
 export default function Page() {
     return (
         <>
+        <Fade duration={2000}>
         <section className="sectionpadded">
             <div className={styles.aboutcontainer}>
                     <div>
@@ -26,6 +27,7 @@ export default function Page() {
                     {/* <Image src={me} alt='Picture of me' className={styles.imageofme}/> */}
             </div>
         </section>
+        </Fade>
         <Fade delay={500}>
             <MyStory />
         </Fade>

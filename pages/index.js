@@ -2,6 +2,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import MyStory from '../components/mystory'
 import React, { useState, useEffect } from "react";
+import Fade from "react-reveal/Fade"
 
 function ScrollCounter() {
 	const [scrollarray, setScrollArray] = useState(0);
@@ -27,11 +28,13 @@ export default function Page() {
 
 	return (
 		<section className="relative">
-			<Hero />
+			<Fade delay={200}>
+				<Hero />
+			</Fade>
 		</section>
 	)
 }
 
 Page.getLayout = function getLayout(page) {
-	return <Layout title="Homepage" background={0}>{page}</Layout>
+	return <Layout title="Homepage">{page}</Layout>
 }
