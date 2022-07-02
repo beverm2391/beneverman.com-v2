@@ -8,8 +8,7 @@
     --link-color-lm: #001eff;
     --link-hover-color-lm: #0072f5;
 
-    /* ! currently unused, use the lm variables above */ 
-    --bg-color-dm: #1a1a1a;
+    --bg-color-dm: #0e171d;
     --text-color-dm: rgb(255, 255, 255);
 
     /* spacing */
