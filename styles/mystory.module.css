@@ -4,6 +4,18 @@
     margin-left: auto;
     /* transform: translateY(-10%); */
     /* padding-top: var(--wrapper-padding) */
+    transition: 1s;
+}
+
+.containerblack {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    /* transform: translateY(-10%); */
+    /* padding-top: var(--wrapper-padding) */
+
+    color: black;
+    transition: 1s;
 }
 
 .row {

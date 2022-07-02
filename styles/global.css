@@ -106,10 +106,13 @@ u {
 .gradientbackgroundlm {
   /* background: linear-gradient(90deg, rgba(255, 59, 59, 1) 35%, rgba(90, 70, 255, 1) 100%); */
 
-  background: #56ab2f;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #56ab2f;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   background-size: 400% 400%;
 
   -webkit-animation: gradient 30s ease infinite;
@@ -120,10 +123,13 @@ u {
 
 
 .gradientbackgrounddm {
-  background: #3E5151;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #3E5151;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #DECBA4, #3E5151);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #DECBA4, #3E5151);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /* background-size: 400% 400%;
 
   -webkit-animation: gradient 30s ease infinite;
@@ -347,4 +353,10 @@ label::after {
 
 input:checked+label::after {
   transform: translate(-100%, -50%) scale(5);
+}
+
+.scrollcounter {
+  position: fixed;
+  top: 0;
+  left: 0;
 }

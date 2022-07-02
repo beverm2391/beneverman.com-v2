@@ -7,10 +7,12 @@ import { FiArrowUpRight } from "react-icons/fi"
 import linkstyles from '../styles/linkunderline.module.css';
 import MyStory from "../components/mystory"
 import Fade from "react-reveal/Fade"
+import Scrollbg from "../components/scrollbg"
 
 export default function Page() {
     return (
         <>
+        <Scrollbg />
         <Fade duration={2000}>
         <section className="sectionpadded">
             <div className={styles.aboutcontainer}>

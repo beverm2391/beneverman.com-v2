@@ -1,22 +1,29 @@
 import styles from '../styles/mystory.module.css'
 import Image from 'next/image'
 import mystoryimage from '../public/images/mystory.png'
+import Scroll from '../components/scroll'
+
+function ScrollClassChange() {
+
+    const scrollmaxheight = Scroll()[1]
+    const scrollheight = (Scroll()[0])
+    // + .5*(window.innerHeight)
+
+    const breakpoint1 = 350
+
+    if (scrollheight > breakpoint1)
+        return styles.containerblack
+    else
+        // I had to give it a default height because the variable was not being set until the user scrolled, so it would be a height of 0 initially
+        return styles.container
+}
 
 export default function MyStory() {
+
     return (
         <section className="section">
-            <div className={styles.container}>
+            <div className={ScrollClassChange()}>
                 <h1>Why I Do It</h1>
-                {/* <div className={styles.row}>
-                    <div className={styles.imagecontainer}>
-                        <div className={styles.imagedirectcontainer}>
-                            <Image src={mystoryimage} alt="Ben Everman" />
-                        </div>
-                    </div>
-                    <div className={styles.titlecontainer}>
-                        <h1 className={styles.title}>My Story</h1>
-                    </div>
-                </div> */}
                 <div className={styles.textcontainer}>
                     <p className={styles.mystorytext}>
                         I have spent the past eight years living with mental illness. I&#39;ve been diagnosed with treatment-resistant depression (non-responsive to pharmacology), OCD, and generalized anxiety disorder, among other things.

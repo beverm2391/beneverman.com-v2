@@ -20,8 +20,7 @@ export async function getStaticProps() {
 
 export default function Page({ allProjectsData }) {
 
-    const router = useRouter();
-
+    const router = useRouter();;
     return (
         <section className="sectionpadded">
             <Fade delay={200}>

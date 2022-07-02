@@ -1,0 +1,28 @@
+#section {
+    width: 100px;
+    height: 100px;
+    background-color: #f00;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.section1 {
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+}
+
+.section2 {
+    background-color: red;
+    min-height: 100vh;
+}
+
+.section2active {
+    background-color: blue;
+    min-height: 100vh;
+}
+
+.section3 {
+    background-color: green;
+    min-height: 100vh;
+}
