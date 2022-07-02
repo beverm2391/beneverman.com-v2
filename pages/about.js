@@ -7,19 +7,51 @@ import { FiArrowUpRight } from "react-icons/fi"
 import linkstyles from '../styles/linkunderline.module.css';
 import MyStory from "../components/mystory"
 import Fade from "react-reveal/Fade"
-import Scrollbg from "../components/scrollbg"
+import Scroll from "../components/scroll"
+
+function backgroundclass() {
+
+    const scrollmaxheight = Scroll()[1]
+    const scrollheight = (Scroll()[0])
+    // + .5*(window.innerHeight)
+
+    // this is the scroll position, so the top of the page
+    const breakpoint1 = 400;
+
+    if (scrollheight > breakpoint1)
+        return styles.bg1
+    else
+        // I had to give it a default height because the variable was not being set until the user scrolled, so it would be a height of 0 initially
+        return `${styles.default} + ${styles.defaultheight}`
+}
+
+function hideAbout() {
+
+    const scrollmaxheight = Scroll()[1]
+    const scrollheight = (Scroll()[0])
+
+    const breakpoint1 = 420;
+
+    if (scrollheight > breakpoint1)
+        return `${styles.abouttextcontainer} + ${styles.invisible}`
+    else
+        return styles.abouttextcontainer
+}
 
 export default function Page() {
+
+    var scrollmaxheight = Scroll()[1]
+
     return (
         <>
-        <Scrollbg />
+        <div className={backgroundclass()} style={{height : scrollmaxheight}}/>
         <Fade duration={2000}>
         <section className="sectionpadded">
             <div className={styles.aboutcontainer}>
                     <div>
                         <h1>About</h1>
                     </div>
-                    <div className={styles.abouttextcontainer}>
+                    <div className={hideAbout()}>
                         <p>I graduated <em>magna cum laude</em> with a <GradientUnderline>B.B.A in Management</GradientUnderline> from the University of Georgia in May 2022</p>
                         <p>Now, I&#39;m in the process of obtaining my <GradientUnderline>Master&#39;s of Business Administration</GradientUnderline> and my <GradientUnderline>Master&#39;s of Social Work</GradientUnderline> at Kennesaw State University in Atlanta, GA</p>
                         <p>I believe that the combination of education in organizational management and clinical social work will uniquely synergize to help me <GradientUnderline>facilitate systemic change in mental healthcare</GradientUnderline>.</p>

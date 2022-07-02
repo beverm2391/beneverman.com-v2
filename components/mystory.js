@@ -2,14 +2,15 @@ import styles from '../styles/mystory.module.css'
 import Image from 'next/image'
 import mystoryimage from '../public/images/mystory.png'
 import Scroll from '../components/scroll'
+import breakpointabout from '../pages/about.js'
 
 function ScrollClassChange() {
-
+    
     const scrollmaxheight = Scroll()[1]
     const scrollheight = (Scroll()[0])
     // + .5*(window.innerHeight)
 
-    const breakpoint1 = 350
+    const breakpoint1 = 400;
 
     if (scrollheight > breakpoint1)
         return styles.containerblack
