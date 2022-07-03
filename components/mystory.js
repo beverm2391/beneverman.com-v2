@@ -10,7 +10,7 @@ function ScrollClassChange() {
     const scrollheight = (Scroll()[0])
     // + .5*(window.innerHeight)
 
-    const breakpoint1 = 400;
+    const breakpoint1 = 600;
 
     if (scrollheight > breakpoint1)
         return styles.containerblack

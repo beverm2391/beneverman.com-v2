@@ -16,13 +16,13 @@ function backgroundclass() {
     // + .5*(window.innerHeight)
 
     // this is the scroll position, so the top of the page
-    const breakpoint1 = 400;
+    const breakpoint1 = 600;
 
     if (scrollheight > breakpoint1)
         return styles.bg1
     else
         // I had to give it a default height because the variable was not being set until the user scrolled, so it would be a height of 0 initially
-        return `${styles.default} + ${styles.defaultheight}`
+        return styles.default
 }
 
 function hideAbout() {
