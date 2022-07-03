@@ -22,7 +22,7 @@
     z-index: 1000;
 }
 
-.mobilenavtoggle{
+.mobilenavtoggle {
     display: none;
 }
 
@@ -31,7 +31,7 @@
     text-decoration: none;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: var(--link-hover-color-lm);
     transition: ease-in 0.2s;
 }
@@ -42,25 +42,36 @@
 }
 
 .toggleopen {
-    background: url(/menuclose.png);
+    background: url(/menuclose.svg);
     background-repeat: no-repeat;
     background-size: contain;
 
-    transition: 0.1s
+    transition: .6s;
 }
 
 .toggleclosed {
-    background: url(/hamburgermenu.svg);
+    background: url(/hamburgermenu.png);
     background-repeat: no-repeat;
     background-size: contain;
 
-    transition: 0.1s
+    transition: 0s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 35em) and (max-width: 55em) {
     .primarynavigation {
         --gap: 3em;
     }
+
     .logo {
         --gap: 3em;
     }
@@ -74,7 +85,7 @@
 
 @media (max-width: 35em) {
     .primarynavigation {
-        --gap : 2em;
+        --gap: 2em;
 
         position: fixed;
         inset: 0 0 0 45%;
@@ -93,7 +104,7 @@
         display: block;
         position: absolute;
         z-index: 9999;
-        
+
         width: 2rem;
         aspect-ratio: 1;
         top: 2rem;
@@ -105,7 +116,7 @@
         transform: translateX(0%);
         transition: 0.4s;
     }
-    
+
     .menuclosed {
         transform: translateX(100%);
         transition: 0.4s;
@@ -113,10 +124,9 @@
 
     /* firefox doesnt support backdrop filter, so this query says to use it if the browser supports, otherwise fallback*/
     @supports (backdrop-filter: blur(1rem)) {
-    .primarynavigation {
-        background: var(--card-bg-lm);
-        backdrop-filter: blur(1rem);
+        .primarynavigation {
+            background:rgb(0, 0, 0, .4);
+            backdrop-filter: blur(1rem);
+        }
     }
 }
-}
-

@@ -81,6 +81,7 @@ u {
 
 .backgrounddm {
   background-color: var(--bg-color-dm);
+  z-index: -9999;
 }
 
 .backgroundlm {

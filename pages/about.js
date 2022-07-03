@@ -62,9 +62,8 @@ export default function Page() {
             </div>
         </section>
         </Fade>
-        <Fade delay={500}>
-            <MyStory />
-        </Fade>
+
+        <MyStory />
         </>
     )
 }

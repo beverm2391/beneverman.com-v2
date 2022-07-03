@@ -100,7 +100,8 @@
 }
 
 .sidebararticlecard {
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(116, 116, 116, 0.5);
+    color: var(--link-color-lm);
     padding: 1rem;
     cursor: pointer;
     margin-bottom: 1rem;
