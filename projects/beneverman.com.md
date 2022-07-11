@@ -11,7 +11,7 @@ tools: "React, Next.js, Vercel, Figma, Adobe Illustrator, Adobe After Effects"
 
 ## Intro
 
-I built version one of beneverman.com with HTMl/CSS and vanilla JavaScript. It was a single portfolio page with some interactivity, and some okay design work. You can check it out here [beneverman.com](https://beneverman.com) It was a great first version, and a great way to learn HTML/CSS and basic JavaScript. But, I decided it was time for some improvements, and clean code that I wouldn't be empbarassed to share.
+I built version one of beneverman.com with HTMl/CSS and vanilla JavaScript. It was a single portfolio page with some interactivity, and some okay design work. You can check it out here: [beneverman.com](https://beneverman.com). It was a great first version, and a great way to learn HTML/CSS and basic JavaScript. But, I decided it was time for some improvements, and clean code that I wouldn't be empbarassed to share.
 
 The core functionality that I wanted to add included: automatic rendering of new blog posts from markdown, automatic generation of the post url, a place where I could proudly showcase my development projects, and much better design.
 
@@ -38,6 +38,13 @@ I used Adobe After Effects mainly for building animations, which were exported t
 3. Next.js
 
 I decided on the React/Next.js mini-stack because, well, it was one I could understand that also offered me the functionality I wanted. I didn't want to have to update code manually when I "posted" a new project writeup or blog article. So, I'm automatically rendering markdown files into React components, which are then assigned a dynamically generated url by Next.js. I can also add a backend if I'd like (I'll probbably start with Firebase).
+
+### Biggest Challenges
+
+Rendering Markdown
+Picking the most effective solution, 
+    Css first, JS second
+Staying Focused
 
 The next things I'll tackle are SEO optimization and adding cooler animations, though I might get distracted by another project, we'll see.
 

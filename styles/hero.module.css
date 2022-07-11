@@ -1,16 +1,19 @@
 .herotitle {
-    font-size: var(--font-size-hero);
+    /* font-size: var(--font-size-hero); */
     margin: 0;
-    line-height: var(--font-size-hero);
+    /* line-height: var(--font-size-hero); */
     /* position: absolute; */
-    padding-bottom: 1rem;
-    padding-left: 10px;
+    padding: 1rem;
 
     font-family: var(--font-primary);
     font-weight: var(--header-weight);
     color: var(--text-color-lm);
     letter-spacing: var(--letter-spacing);
     z-index: 2;
+
+    font-size: clamp(3rem, 10vw, var(--font-size-hero));
+
+    text-align: center;
 
     transition: all 0.5s;
 }
@@ -40,12 +43,12 @@
 
 .typewriter {
     font-family: var(--font-secondary);
-    font-size: var(--font-size-h3);
+    font-size: clamp(.8rem, 4vw, var(--font-size-h3));
 }
 
 .typewritercursor {
     font-family: var(--font-secondary);
-    font-size: var(--font-size-h3);
+    font-size: clamp(.8rem, 5vw, var(--font-size-h3));
     -webkit-animation: blink-animation 1s steps(10, start) infinite;
     animation: blink-animation 1s steps(10, start) infinite;
     margin-left: 1px;
@@ -64,8 +67,6 @@
 }
 
 .titlecontainer {
-    /* this fixed height keeps the div from changing height based on the component inside. That's bad because the button will move */
-    height: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;

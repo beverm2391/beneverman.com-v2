@@ -23,7 +23,7 @@ export default function Page({ allPostsData }) {
         <Layout title="Blog">
             <Fade delay={200}>
                 <section className="sectionpadded">
-                    <div className={styles.blogindexgrid}>
+                    <div className={styles.blogwrapper}>
 
                         <div className={styles.article}>
                             <div className={styles.blogtitlecontainer}>
@@ -33,7 +33,7 @@ export default function Page({ allPostsData }) {
                             {allPostsData.map(({ id, title, date, image }) => (
                                 <div key={id}>
                                     <Link href={`/blog/${id}`}>
-                                        <div className={styles.articlecard}>
+                                        <div className={styles.articlecard} styles={{minHeight: '200px'}}>
                                             <div className={styles.articlesubcard}>
                                                 <h4 className={styles.articlecardtitle}>{title}</h4>
                                                 <br />
@@ -41,6 +41,7 @@ export default function Page({ allPostsData }) {
                                                     <Date dateString={date} />
                                                 </small>
                                             </div>
+
                                                 <div className={styles.articlecardimage}>
                                                     {image && <Image src={image} alt="Ben Everman" height={100} width={100} />}
                                                 </div>

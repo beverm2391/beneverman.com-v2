@@ -1,17 +1,18 @@
-.projectswrapper {
+/* .projectswrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
     margin-top: 3rem;
-}
+} */
 
 .titlecontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     position: relative;
 
@@ -19,13 +20,14 @@
 
 .projectswrapper {
     margin: auto;
-    max-width: 900px;
+    width: clamp(300px, 80vw, 800px);
+    margin-bottom: 6rem;
 }
 
 .projectscontainer{
     width: 100%;
     cursor: pointer;
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 
     display: flex;
@@ -37,8 +39,13 @@
     width: 70%;
     height: 70%;
     margin-bottom: 3rem;
+    filter: brightness(.8);
 
     transition: ease-out 0.3s;
+}
+
+.imagecontainer img {
+    border-radius: 10px;
 }
 
 .imagecontainer:hover {
@@ -46,6 +53,7 @@
     width: 70%;
     height: 70%;
     margin-bottom: 3rem;
+    filter: brightness(.9);
 
     /* transform: scale(1.02); */
     transition: ease-out 0.3s;
@@ -82,8 +90,15 @@
     padding: 2rem 2rem;
     font-family: var(--font-primary);
     box-shadow: 0px 0px 10px rgba(135, 135, 135, 0.1);
+    border-radius: 12px;
 
     transition: ease-out 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+    .titlecard {
+        padding: 1.5rem 1.5rem
+    }
 }
 
 .titlecard:hover {
@@ -112,10 +127,17 @@
 .descriptionimage {
     font-weight: 400;
     margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 .description {
-    margin-top: 1rem;
+    height: auto;
+}
+
+.description > p, .descriptionimage > p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 .iconcontainer{

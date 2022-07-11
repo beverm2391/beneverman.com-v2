@@ -15,6 +15,17 @@
     max-width: 925px;
 }
 
+.ppcontainer p {
+    margin: 2rem 0;
+    font-family: var(--font-primary);
+    letter-spacing: .01rem;
+}
+
+.ppcontainer p, .ppcontainer li {
+    opacity: .85
+}
+
+
 /* use this to adjust the height between the title and the content, when there is no image */
 .spacer {
     height: 3rem;
@@ -48,10 +59,7 @@
 .pptitle {
     margin-bottom: 0;
     margin-top: 0;
-    font-size: var(--font-size-h2);
-}
-
-.ppimagecontainer {
+    font-size: clamp(1.5rem, 8vw, var(--font-size-h2));
 }
 
 .ppimagesubcotainer{

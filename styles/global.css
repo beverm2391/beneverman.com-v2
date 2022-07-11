@@ -21,28 +21,27 @@ body {
 
 h1 {
   color: var(--text-color);
-  font-size: var(--font-size-lg);
 
   font-family: var(--font-primary);
   font-weight: var(--header-weight);
-  font-size: var(--font-size-h1);
+  font-size: clamp(3.5rem, 10vw, var(--font-size-h1));
 
   margin-top: 0;
 }
 
 h2 {
-  font-size: var(--font-size-h2);
+  font-size: clamp(0rem, 8vw, var(--font-size-h2));
   font-weight: 600;
 }
 
 h3 {
-  font-size: var(--font-size-h3);
-  font-weight: 400;
+  font-size: clamp(1rem, 4vw, var(--font-size-h3));
+  font-weight: 600;
 }
 
 h4 {
   font-size: var(--font-size-h4);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h5 {
@@ -68,8 +67,9 @@ a:hover {
 }
 
 p {
-  line-height: 1.7rem;
+  line-height: 1.7;
   font-family: var(--font-secondary);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
 }
 
 u {
@@ -87,96 +87,10 @@ u {
   background-color: var(--bg-color-lm);
 }
 
-.backgroundimagelm {
-  background-image: url('../public/images/backgroundlm.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.gradientimagebackgroundlm {
-  background-image: url('../public/images/backgroundlm.jpg');
-  background: linear-gradient(270deg rgba(255, 246, 235, 0.1), rgb(255, 255, 255, .1));
-  background-size: 400% 400%;
-
-  -webkit-animation: gradient 30s ease infinite;
-  -moz-animation: gradient 30s ease infinite;
-  animation: gradient 30s ease infinite;
-}
-
-.gradientbackgroundlm {
-  /* background: linear-gradient(90deg, rgba(255, 59, 59, 1) 35%, rgba(90, 70, 255, 1) 100%); */
-
-  background: #56ab2f;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #a8e063, #56ab2f);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background-size: 400% 400%;
-
-  -webkit-animation: gradient 30s ease infinite;
-  -moz-animation: gradient 30s ease infinite;
-  animation: gradient 30s ease infinite;
-}
-
-
-
-.gradientbackgrounddm {
-  background: #3E5151;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #DECBA4, #3E5151);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #DECBA4, #3E5151);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  /* background-size: 400% 400%;
-
-  -webkit-animation: gradient 30s ease infinite;
-  -moz-animation: gradient 30s ease infinite;
-  animation: gradient 30s ease infinite; */
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@-moz-keyframes gradient {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%
-  }
-
-  50% {
-    background-position: 100% 50%
-  }
-
-  100% {
-    background-position: 0% 50%
-  }
+.uigradient1 {
+  background: #f12711;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
 }
 
 /* ! Sections, Wrappers, and Container */

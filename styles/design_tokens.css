@@ -17,6 +17,9 @@
     --letter-spacing: 0.1rem;
     --header-weight: 500;
 
+    /* responsive containers */
+    --about-max-container-width: 900px;
+
     /* fonts */
     /* --font-primary: "Playfair Display"; */
     --font-primary: "Lora";

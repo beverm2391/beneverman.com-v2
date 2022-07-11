@@ -1,5 +1,5 @@
 .container {
-    width: 60%;
+    width: clamp(300px, 80vw, var(--about-max-container-width));
     margin-right: auto;
     margin-left: auto;
     /* transform: translateY(-10%); */
@@ -9,7 +9,7 @@
 }
 
 .containerblack {
-    width: 60%;
+    width: clamp(300px, 80vw, var(--about-max-container-width));
     margin-right: auto;
     margin-left: auto;
     /* transform: translateY(-10%); */
@@ -59,7 +59,6 @@
 }
 
 .textcontainer > p {
-    font-size: 1.2rem;
     margin-bottom: 2.5rem;
     line-height: 1.7;
 }

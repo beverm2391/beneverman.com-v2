@@ -30,7 +30,7 @@ function hideAbout() {
     const scrollmaxheight = Scroll()[1]
     const scrollheight = (Scroll()[0])
 
-    const breakpoint1 = 420;
+    const breakpoint1 = 600;
 
     if (scrollheight > breakpoint1)
         return `${styles.abouttextcontainer} + ${styles.invisible}`

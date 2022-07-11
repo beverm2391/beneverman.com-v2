@@ -64,7 +64,9 @@ export default function Page({ allProjectsData }) {
                     </>
                 )
                 )}
-                <Line />
+                <div style={{ height: '1.5px', width: '100%', opacity: 1, marginBottom: "0"}}>
+                    <Line />
+                </div>
             </div>
 
         </section >

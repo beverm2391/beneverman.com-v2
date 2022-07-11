@@ -6,7 +6,7 @@ export default function Scroll() {
 	useEffect(() => {
 
 		const handleScroll = () => {
-			setScrollArray([window.scrollY, (document.body.scrollHeight)]);
+			setScrollArray([window.scrollY, (document.body.scrollHeight), (window.innerHeight)]);
 		}
 
 		window.addEventListener('scroll', handleScroll, { passive: true });

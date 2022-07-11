@@ -66,7 +66,7 @@ export default function Post({ postData, allPostsData }) {
                                 </div>
                             </Link>
 
-                            <h5>More From Me</h5>
+                            <h4>More From Me</h4>
 
                             <div className={styles.morearticles}>
                                 {allPostsDataExcept.map(({ id, title }) => (
