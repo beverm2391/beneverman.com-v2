@@ -1,6 +1,6 @@
 ---
 title: 'www.beneverman.com'
-date: '2022-07-01'
+date: '2022-07-12'
 image: '/images-optimized/projects/laptop.jpg'
 width: 5243
 height: 3495

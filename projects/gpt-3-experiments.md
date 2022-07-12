@@ -1,6 +1,6 @@
 ---
 title: 'GPT-3 Experiments'
-date: '2022-06-30'
+date: ''
 image: '/images-optimized/projects/brain.jpg'
 width: 4096
 height: 3112

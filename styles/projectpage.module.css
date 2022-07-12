@@ -17,14 +17,9 @@
 
 .ppcontainer p {
     margin: 2rem 0;
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     letter-spacing: .01rem;
 }
-
-.ppcontainer p, .ppcontainer li {
-    opacity: .85
-}
-
 
 /* use this to adjust the height between the title and the content, when there is no image */
 .spacer {
@@ -35,10 +30,15 @@
     margin-bottom: 3rem;
 }
 
-.imagecontainer {
-    position: absolute;
-    top: 0;
-    left: 0;
+.ppimagecontainer img {
+    filter: brightness(0.9);
+    border-radius: 20px;
+}
+
+.ppimagecontainer {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .3) 20px 20px 100px;
+    margin-bottom: 4rem;
 }
 
 .ppiconcontainer {

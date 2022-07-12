@@ -79,8 +79,12 @@ u {
 
 /* ! Backgrounds */
 
+/* !using this background right now */
 .backgrounddm {
-  background-color: var(--bg-color-dm);
+  background: #23074d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cc5333, #23074d);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cc5333, #23074d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 .backgroundlm {
@@ -88,9 +92,12 @@ u {
 }
 
 .uigradient1 {
-  background: #f12711;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background: #f12711;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* ! Sections, Wrappers, and Container */
@@ -143,6 +150,14 @@ u {
 
 .icon {
   padding: 0;
+  color: var(--text-color-dm);
+  transition: .3s ease;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--link-hover-color);
+  transition: .3s ease;
 }
 
 .counter {

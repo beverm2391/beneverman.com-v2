@@ -42,7 +42,7 @@ export default function Project({ projectData }) {
                             </div>
                             {projectData.image ?
                                 <div className={styles.ppimagecontainer}>
-                                    <Image src={projectData.image} alt={projectData.id} width={projectData.width} height={projectData.height} />
+                                    <Image src={projectData.image} alt={projectData.id} width={projectData.width} height={projectData.height} layout={"responsive"}/>
                                 </div> :
                                 <div className={styles.spacer}></div>
                             }

@@ -18,6 +18,14 @@ export async function getStaticProps() {
 }
 
 export default function Page({ allPostsData }) {
+
+    function filterPublished(props) {
+        return props.filter( post =>  post.date)
+    }
+
+    // Create a new array with all projects that have a "date"
+    const allPostsDataPublished = filterPublished(allPostsData);
+
     return (
 
         <Layout title="Blog">
@@ -30,7 +38,7 @@ export default function Page({ allPostsData }) {
                                 <h1 className={styles.blogtitle}>Blog</h1>
                             </div>
                             <Line />
-                            {allPostsData.map(({ id, title, date, image }) => (
+                            {allPostsDataPublished.map(({ id, title, date, image }) => (
                                 <div key={id}>
                                     <Link href={`/blog/${id}`}>
                                         <div className={styles.articlecard} styles={{minHeight: '200px'}}>

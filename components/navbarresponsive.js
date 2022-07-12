@@ -27,7 +27,7 @@ export default function NavbarResponsive(props) {
                         return (
                             <li key={id}>
                                 <Link href={link}>
-                                    <a className={linkstyles.linkunderline}>{name}</a>
+                                    <a className={linkstyles.linkunderline} onClick={() => setIsOpen(!isOpen)}>{name}</a>
                                 </Link>
                             </li>
                         )

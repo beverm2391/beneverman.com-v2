@@ -17,9 +17,8 @@
 }
 
 .blogwrapper {
-    margin: auto;
+    margin: 1rem auto 6rem auto;
     width: clamp(300px, 80vw, 650px);
-    margin-bottom: 6rem;
 }
 
 .article {

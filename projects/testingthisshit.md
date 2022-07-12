@@ -1,6 +1,6 @@
 ---
 title: "Oh yeah, we're testing this shit baby"
-date: '2020-01-01'
+date: ''
 desc: 'some stuff about testing'
 ---
 

@@ -44,8 +44,6 @@
     z-index: 0;
 
     transition: 1.2s;
-
-    background: var(--bg-color-dm);
 }
 
 .defaultheight {
