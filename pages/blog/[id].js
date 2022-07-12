@@ -24,10 +24,10 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
     const paths = getAllPostIds();
 
-    paths.filter(path => path.date)
+    const pathsfiltered = paths.filter(path => path.date)
     
     return {
-        paths,
+        pathsfiltered,
         fallback: false
     };
 }
