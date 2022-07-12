@@ -23,6 +23,9 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
     const paths = getAllPostIds();
+
+    paths.filter(path => path.date)
+    
     return {
         paths,
         fallback: false
