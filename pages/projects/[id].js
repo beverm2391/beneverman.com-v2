@@ -9,6 +9,7 @@ import markdownstyles from '../../styles/markdown.module.css';
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id);
+    
     return {
         props: {
             projectData,
