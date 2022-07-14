@@ -13,8 +13,10 @@
 }
 
 .active {
-    transition: all 2s;
+    transition: background-size 2s;
     transition-delay: 1s;
+
+    /* this is so the background and text transitions arent delayed like the underline is */
 
     background:
         linear-gradient(to right,

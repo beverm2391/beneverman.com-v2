@@ -2,7 +2,7 @@
 .linkunderline {
     display: inline-block;
     position: relative;
-    color: var(--text-color-lm);
+    color: unset;
 }
 
 .linkunderline:hover {

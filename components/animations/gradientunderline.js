@@ -12,8 +12,10 @@ export default function GradientUnderline(props) {
     // this runs the function one single time when the component is mounted
     // typically you dont want to call a function in useEffect
     useEffect(() => {
-        OnMount();
-    }, []);
+        // if inView doesnt exist, go ahead and trigger the animation
+        // if inView exists, only trigger the animation if the element is in view
+        {props.inView == null ? OnMount(): props.inView == true && OnMount() }
+    }, [props.inView]);
 
     return (
         <>

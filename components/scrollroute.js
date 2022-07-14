@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function ScrollRoute(href) {
@@ -6,17 +6,16 @@ export default function ScrollRoute(href) {
     const router = useRouter()
 
     useEffect(() => {
-
-        const handleScroll = (e) => {
-            if (window.scrollY == document.body.scrollHeight - window.innerHeight) {
-    
+        const handleWheel = (e) => {
                 e.preventDefault()
-                router.push(href)
-                window.removeEventListener('scroll', handleScroll, { passive: true })
+                router.push(href)   
+                window.removeEventListener('wheel', handleWheel)
             }
+
+        if (window.scrollY == document.body.scrollHeight - window.innerHeight) {
+            window.addEventListener('wheel', handleWheel)
+            console.log("bottom")
         }
 
-        window.addEventListener('scroll', handleScroll, { passive: true })
-        
     }, [href, router]);
 }

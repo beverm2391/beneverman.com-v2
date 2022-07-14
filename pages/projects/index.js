@@ -22,12 +22,12 @@ export default function Page({ allProjectsData }) {
 
     const router = useRouter();;
 
-    function filterPublished(props) {
-        return props.filter( project =>  project.date)
-    }
-
-    // Create a new array with all projects that have a "date"
-    const allProjectsDataPublished = filterPublished(allProjectsData);
+    // old code for filtering out projects with no date (make sure to change the array name below to allProjectsDataPublished)
+    // function filterPublished(props) {
+    //     return props.filter( project =>  project.date)
+    // }
+    // // Create a new array with all projects that have a "date"
+    // const allProjectsDataPublished = filterPublished(allProjectsData);
 
     return (
         <section className="sectionpadded">
@@ -37,7 +37,7 @@ export default function Page({ allProjectsData }) {
                 </div>
             </Fade>
             <div className={styles.projectswrapper}>
-                {allProjectsDataPublished.map(({ id, title, desc, image, width, height }) => (
+                {allProjectsData.map(({ id, title, desc, image, width, height }) => (
                     <>
                         {/* generate link to project page */}
                         <Fade delay={200}>
