@@ -1,0 +1,66 @@
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 50% 1fr 25% 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    padding-top: 7rem;
+}
+
+.textcontainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    grid-column: 2;
+}
+
+.imagecontainer {
+    display: block;
+    grid-column: 4;
+    width: 70%;
+    padding-top: 2rem;
+}
+
+.textcontainer h2 {
+    font-weight: 700;
+}
+
+.title {
+    margin: 0 0 0 2rem;
+    margin-bottom: 4rem;
+
+    font-family: var(--font-tertiary);
+    font-weight: 700;
+    color: var(--text-color-lm);
+    z-index: 2;
+
+    font-size: clamp(3rem, 7vw, var(--font-size-hero));
+    line-height: 1;
+}
+
+.subheading {
+    margin: .5rem 0 .5rem 2rem;
+    line-height: 1;
+    font-size: clamp(2rem, 4vw, var(--font-size-hero));
+}
+
+.gradienttext {
+    margin: 0;
+    margin-bottom: 2rem;
+
+    font-family: var(--font-tertiary);
+    font-weight: 600;
+    color: var(--text-color-lm);
+    z-index: 2;
+
+    background: linear-gradient(to right,
+            rgba(255, 0, 0, 1),
+            rgba(255, 0, 180, 1),
+            rgba(0, 100, 200, 1));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: clamp(2rem, 3vw, var(--font-size-h2));
+}
