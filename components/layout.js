@@ -7,7 +7,7 @@ import Scroll from './scroll.js';
 const backgrounds = ['backgrounddm', 'gradientbackgrounddm', 'gradientbackgroundlm']
 const defaultbackground = 'backgrounddm'
 
-export default function Layout({ title, children, background}) {
+export default function Layout({ title, children, background, footer}) {
     return (
         <>
             <Head>
@@ -19,7 +19,7 @@ export default function Layout({ title, children, background}) {
                 {/* <FadeIn> */}
                     <main>{children}</main>
                 {/* </FadeIn> */}
-                <Footer />
+                {footer && <Footer />}
             </div> 
         </>
     )

@@ -6,7 +6,7 @@ import Fade from "react-reveal/Fade"
 
 export default function Page() {
     return (
-        <Layout title="Contact">
+        <Layout title="Contact" footer="yes">
             <Fade delay={200}>
                 <section className="section">
                     <div className="wrapper">
