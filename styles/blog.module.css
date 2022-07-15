@@ -6,6 +6,8 @@
     grid-row-gap: 0px;
 
     padding: 2rem;
+
+    color: var(--blog-text-color);
 }
 
 .blogindexgrid {
@@ -19,10 +21,56 @@
 .blogwrapper {
     margin: 1rem auto 6rem auto;
     width: clamp(300px, 80vw, 650px);
+
+    color: var(--blog-text-color);
+}
+
+.article hr {
+    border-top: 1.5px solid rgb(135, 135, 135);
+    margin-top: 3rem;
 }
 
 .article {
     grid-column: 2;
+    opacity: 1;
+}
+
+/* link styling */
+
+.article a {
+    display: inline-block;
+    position: relative;
+    color: var(--link-color-lm);
+}
+
+.article a:hover {
+    color: var(--link-hover-color-lm);
+}
+
+.article a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--link-hover-color-lm);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.article a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.article p {
+    font-family: var(--font-primary);
+}
+
+.article ol {
+    font-family: var(--font-primary);
 }
 
 .blogtitlecontainer {
@@ -35,7 +83,7 @@
     margin-bottom: 3rem;
 }
 
-.articlecard{
+.articlecard {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -78,10 +126,15 @@
     margin-bottom: 0;
 }
 
+.articletitlecontainer {
+    margin-bottom: 3rem;
+}
+
 .articletitle {
     margin-top: 0;
     font-size: clamp(2rem, 8vw, var(--font-size-h2));
     font-family: var(--font-primary);
+    margin-bottom: 1rem;
 }
 
 .blogiconcontainer {
@@ -93,7 +146,7 @@
     cursor: pointer;
 }
 
-.sidebar{
+.sidebar {
     grid-column: 4;
 
     margin-top: 4rem;
@@ -106,17 +159,18 @@
 
     .blogpagegrid {
         all: unset;
+        color: var(--blog-text-color);
         display: flex;
         justify-content: center;
         padding: max(15%, 4rem);
     }
 
-    .blogiconcontainer{
+    .blogiconcontainer {
         display: none;
     }
 }
 
-.aboutcard{
+.aboutcard {
     cursor: pointer;
     padding: 1rem;
     transition: .4s ease;
@@ -124,12 +178,12 @@
 }
 
 .aboutcard:hover {
-    background:rgba(116, 116, 116, 0.2);
+    background: rgba(116, 116, 116, 0.2);
     border-radius: 12px;
     transition: .4s ease;
 }
 
-.aboutcard > p {
+.aboutcard>p {
     margin-bottom: 0;
 }
 
@@ -156,7 +210,36 @@
     transition: 0.4s ease;
 }
 
-.sidebar > h4 {
+.sidebar>h4 {
     padding: 0 1rem;
     margin-bottom: 1rem;
+}
+
+.endingblock {
+    margin-top: 0rem;
+    color: rgb(135, 135, 135);
+    margin-bottom: 3rem;
+
+    display: flex;
+}
+
+.endingblock p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.endingblock h4 {
+    font-family: var(--font-primary);
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.ebtextcontainer {
+    margin-right: clamp(1rem, 4vw, 5rem);
+}
+
+.ebimagecontainer {
+    display: flex;
+    align-items: center;
 }

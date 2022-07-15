@@ -4,29 +4,16 @@
     align-items: center;
     max-height: 100vh;
 
-    padding: 10rem 0 10rem 9rem;
-}
-
-.textcontainer {
-    grid-column: 2;
-}
-
-.imagecontainer {
-    display: block;
-    grid-column: 4;
-    width: 70%;
-}
-
-.modelcontainer {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
+    padding: 10rem 0 8rem 8rem;
 }
 
 .textcontainer h2 {
     font-weight: 700;
+}
+
+.pageextender {
+    content: '';
+    height: 100px;
 }
 
 .title {
@@ -66,5 +53,5 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: clamp(2rem, 3vw, var(--font-size-h2));
+    font-size: clamp(2rem, 6.5vw, var(--font-size-h2));
 }

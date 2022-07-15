@@ -6,16 +6,18 @@ export default function ScrollRoute(href) {
     const router = useRouter()
 
     useEffect(() => {
+
         const handleWheel = (e) => {
+            if (window.scrollY == document.body.scrollHeight - window.innerHeight) {
                 e.preventDefault()
-                router.push(href)   
+                router.push(href)
                 window.removeEventListener('wheel', handleWheel)
             }
 
-        if (window.scrollY == document.body.scrollHeight - window.innerHeight) {
-            window.addEventListener('wheel', handleWheel)
-            console.log("bottom")
+            console.log(window.scrollY, document.body.scrollHeight - window.innerHeight)
         }
+
+        window.addEventListener('wheel', handleWheel)
 
     }, [href, router]);
 }

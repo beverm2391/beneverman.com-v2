@@ -6,12 +6,13 @@ import Fade from "react-reveal/Fade"
 
 export default function Page() {
 	return (
-		<section className="relative">
-			<Fade delay={200}>
-				<Hero />
-			</Fade>
-			<div style={{height: "1px"}}/>
-		</section>
+		<>
+			<section className="relative">
+				<Fade delay={200}>
+					<Hero />
+				</Fade>
+			</section>
+		</>
 	)
 }
 

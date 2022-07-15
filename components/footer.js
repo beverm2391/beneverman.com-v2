@@ -1,11 +1,11 @@
 import styles from "../styles/footer.module.css"
 import {BsTwitter, BsLinkedin, BsGithub} from "react-icons/bs"
 
-export default function Footer() {
+export default function Footer(props) {
     const iconsize = 20
     const iconcolor = '#808080'
     return (
-        <div className={styles.footer}>
+        <div className={props.footerclass}>
             <div className={styles.copyrightcontainer}>
                 <h5 style={{color: iconcolor}}>Ben Everman © 2022</h5>
             </div>

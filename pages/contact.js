@@ -3,10 +3,11 @@ import styles from "../styles/contact.module.css"
 import linkstyles from "../styles/linkunderline.module.css"
 import { BsTwitter, BsLinkedin, BsGithub } from "react-icons/bs"
 import Fade from "react-reveal/Fade"
+import footerstyles from "../styles/footer.module.css"
 
 export default function Page() {
     return (
-        <Layout title="Contact" footer="yes">
+        <Layout title="Contact" footerclass={footerstyles.footerblack}>
             <Fade delay={200}>
                 <section className="section">
                     <div className="wrapper">

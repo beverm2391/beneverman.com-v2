@@ -7,6 +7,7 @@ import linkstyles from '../styles/linkunderline.module.css';
 import MyStory from "../components/mystory"
 import Fade from "react-reveal/Fade"
 import Scroll from "../components/scroll"
+import footerstyles from "../styles/footer.module.css"
 
 function backgroundclass() {
 
@@ -68,5 +69,5 @@ export default function Page() {
 }
 
 Page.getLayout = function getLayout(page) {
-    return <Layout title="About">{page}</Layout>
+    return <Layout title="About" footerclass={footerstyles.footer}>{page}</Layout>
 }

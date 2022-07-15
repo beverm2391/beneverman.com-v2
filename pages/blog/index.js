@@ -7,6 +7,8 @@ import Image from "next/image";
 import profilepic from "../../public/images/profilepic.jpg";
 import Line from "../../components/line.js";
 import Fade from "react-reveal/Fade";
+import navbarstyles from "../../styles/navbarresponsive.module.css";
+import footerstyles from "../../styles/footer.module.css";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -28,7 +30,7 @@ export default function Page({ allPostsData }) {
 
     return (
 
-        <Layout title="Blog">
+        <Layout title="Blog" background="backgroundlm" navbarclass={navbarstyles.navbarblack} footerclass={footerstyles.footer}>
             <Fade delay={200}>
                 <section className="sectionpadded">
                     <div className={styles.blogwrapper}>

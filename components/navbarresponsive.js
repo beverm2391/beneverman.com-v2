@@ -19,7 +19,7 @@ export default function NavbarResponsive(props) {
     return (
         <>
             <button className={`${styles.mobilenavtoggle} ${isOpen ? styles.toggleopen : styles.toggleclosed}`} onClick={() => setIsOpen(!isOpen)}></button>
-            <nav className={styles.navbar}>
+            <nav className={props.navbarclass ? props.navbarclass : styles.navbar}>
                 {/* <div className={styles.logo}>Ben
                 </div> */}
                 <ul id="primarynavigaion" className={`${styles.primarynavigation} ${!isOpen ? styles.menuclosed : styles.menuopen}`}>

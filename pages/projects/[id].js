@@ -6,6 +6,7 @@ import styles from '../../styles/projectpage.module.css';
 import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
 import markdownstyles from '../../styles/markdown.module.css';
+import footerstyles from '../../styles/footer.module.css';
 
 export async function getStaticProps({ params }) {
     const projectData = await getProjectData(params.id);
@@ -29,7 +30,7 @@ export default function Project({ projectData }) {
     const router = useRouter();
 
     return (
-        <Layout title={projectData.title}>
+        <Layout title={projectData.title} footerclass={footerstyles.footerblack}>
             <Fade delay={200}>
                 <section className="sectionpadded">
                     <div className={styles.ppwrapper}>

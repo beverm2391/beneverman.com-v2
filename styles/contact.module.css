@@ -21,3 +21,11 @@
 
     gap: 1rem;
 }
+
+/* 404 page styles */
+
+.errortitle {
+    font-weight: 600;
+    font-family: var(--font-secondary);
+    color: black;
+}

@@ -4,13 +4,15 @@
     --card-bg-lm: rgba(140, 140, 140, 0.4);
 
     /* !Using this text color right now */
-    --text-color-lm: rgb(227, 227, 227);
+    --text-color-lm: rgb(246, 245, 245);
 
     --link-color-lm: #7c8cff;
     --link-hover-color-lm: #0072f5;
 
     --bg-color-dm: #344955;
     --text-color-dm: rgb(255, 255, 255);
+
+    --blog-text-color: rgb(0, 0, 0);
 
     /* spacing */
     --section-top-padding : 7rem;

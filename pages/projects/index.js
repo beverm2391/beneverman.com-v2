@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import { BsArrowBarRight, BsArrowReturnRight, BsArrowRight } from "react-icons/bs";
+import footerstyles from '../../styles/footer.module.css';
 
 export async function getStaticProps() {
     const allProjectsData = getSortedProjectsData();
@@ -82,5 +82,5 @@ export default function Page({ allProjectsData }) {
 }
 
 Page.getLayout = function getLayout(page) {
-    return <Layout title="Projects">{page}</Layout>
+    return <Layout title="Projects" footerclass={footerstyles.footerblack}>{page}</Layout>
 }

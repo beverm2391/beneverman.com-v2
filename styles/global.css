@@ -73,6 +73,13 @@ p {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
 }
 
+ol, ul {
+  line-height: 1.7;
+  font-family: var(--font-secondary);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin: 2rem 0 2rem 3rem;
+}
+
 u {
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -90,7 +97,7 @@ u {
   background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2)); */
   
   background: rgb(21,22,45);
-  background: linear-gradient(27deg, #171D21 28%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(27deg, rgba(21,22,45,1) 28%, rgba(0,0,0,1) 100%);
 }
 
 .backgroundlm {
