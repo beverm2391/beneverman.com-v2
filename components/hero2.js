@@ -14,7 +14,7 @@ export default function Page() {
                         <div className={styles.textcontainer}>
                             <h2 className={styles.gradienttext}>My name is:</h2>
                             <h1 className={styles.title}>Ben Everman</h1>
-                            <h2 className={styles.gradienttext}>I'm a:</h2>
+                            <h2 className={styles.gradienttext}>I&#39;m a:</h2>
                             <h2 className={styles.subheading}>Social Work Student</h2>
                             <h2 className={styles.subheading}>MBA Student</h2>
                             <h2 className={styles.subheading}>Developer</h2>
