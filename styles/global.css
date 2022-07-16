@@ -89,15 +89,16 @@ u {
 
 /* !using this background right now */
 .backgrounddm {
-  --gradient-color-1: #161837;
-  --gradient-color-2: #2f303b;
+  --gradient-color-1: #1b1e44;
+  --gradient-color-2: #17181d;
 
-  /* background: var(--gradient-color-1);
+  background: var(--gradient-color-1);
   background: -webkit-linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
-  background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2)); */
-  
+  background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
+/*   
   background: rgb(21,22,45);
   background: linear-gradient(27deg, rgba(21,22,45,1) 28%, rgba(0,0,0,1) 100%);
+*/
 }
 
 .backgroundlm {
