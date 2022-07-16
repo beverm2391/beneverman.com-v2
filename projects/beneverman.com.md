@@ -33,24 +33,22 @@ I used Adobe After Effects mainly for building animations, which were exported t
 
 ### Picking The Stack
 
-1. HTML/CSS
-2. React
-3. Next.js
+1. React
+2. Next.js
 
 I decided on the React/Next.js mini-stack because, well, it was one I could understand that also offered me the functionality I wanted. I didn't want to have to update code manually when I "posted" a new project writeup or blog article. So, I'm automatically rendering markdown files into React components, which are then assigned a dynamically generated url by Next.js. I can also add a backend if I'd like (I'll probbably start with Firebase).
 
 ### Biggest Challenges
 
-Rendering Markdown
-Picking the most effective solution, 
-    Css first, JS second
-Staying Focused
+* Rendering markdown
+* Picking the most effective solution for animations
+* Staying focused on features that matter
 
 The next things I'll tackle are SEO optimization and adding cooler animations, though I might get distracted by another project, we'll see.
 
 ### Concluding
 
-For now, I'll focus on creating efective project write-ups and relevant blog posts.
+For now, I'll focus on creating effective project write-ups and relevant blog posts.
 
 If you want to know how I did anything, you can check the code on GitHub. Don't hesitate to reach out via email or Twitter if you have any questions!
 

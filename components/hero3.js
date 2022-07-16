@@ -1,7 +1,7 @@
-import Layout from "../components/layout"
+import Layout from "./layout"
 import styles from "../styles/hero3.module.css"
 import Fade from "react-reveal/Fade"
-import ScrollRoute from "../components/scrollroute.js"
+import ScrollRoute from "./scrollroute.js"
 
 // write a sentence
 
