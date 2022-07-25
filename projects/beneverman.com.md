@@ -1,9 +1,9 @@
 ---
 title: 'www.beneverman.com'
 date: '2022-07-12'
-image: '/images-optimized/projects/laptop.jpg'
-width: 5243
-height: 3495
+image: '/images/projects/my-site.jpg'
+width: 1920
+height: 1080
 desc: "This version of beneverman.com is my second version. Its a personal website, one where I can share about the things I've accomplished, the things I'm working on, and how I'm feeling about all of it. It's built with React and Next.js"
 skills: "Graphic Design, Front End Web Development"
 tools: "React, Next.js, Vercel, Figma, Adobe Illustrator, Adobe After Effects"
@@ -11,7 +11,7 @@ tools: "React, Next.js, Vercel, Figma, Adobe Illustrator, Adobe After Effects"
 
 ## Intro
 
-I built version one of beneverman.com with HTMl/CSS and vanilla JavaScript. It was a single portfolio page with some interactivity, and some okay design work. You can check it out here: [beneverman.com](https://beneverman.com). It was a great first version, and a great way to learn HTML/CSS and basic JavaScript. But, I decided it was time for some improvements, and clean code that I wouldn't be empbarassed to share.
+Before this, I built a version of beneverman.com with HTMl/CSS and vanilla JavaScript. It was a single portfolio page with some interactivity, and some okay design work. You can check it out here: [Version 1](https://beneverman-legacy.netlify.app/). It was a great first version, and a great way to learn HTML/CSS and basic JavaScript. But, I decided it was time for some improvements, and clean code that I wouldn't be empbarassed to share.
 
 The core functionality that I wanted to add included: automatic rendering of new blog posts from markdown, automatic generation of the post url, a place where I could proudly showcase my development projects, and much better design.
 

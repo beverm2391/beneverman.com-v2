@@ -89,8 +89,8 @@ u {
 
 /* !using this background right now */
 .backgrounddm {
-  --gradient-color-1: #1b1e44;
-  --gradient-color-2: #17181d;
+  --gradient-color-1: #023047;
+  --gradient-color-2: #14213d;
 
   background: var(--gradient-color-1);
   background: -webkit-linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
