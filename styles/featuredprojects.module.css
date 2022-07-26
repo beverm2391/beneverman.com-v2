@@ -39,7 +39,7 @@
     width: 70%;
     height: 70%;
     margin-bottom: 3rem;
-    filter: brightness(.8);
+    filter: brightness(1);
 
     transition: ease-out 0.3s;
 }
@@ -53,7 +53,7 @@
     width: 70%;
     height: 70%;
     margin-bottom: 3rem;
-    filter: brightness(.9);
+    filter: brightness(1);
 
     /* transform: scale(1.02); */
     transition: ease-out 0.3s;
