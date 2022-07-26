@@ -25,11 +25,6 @@
     color: var(--blog-text-color);
 }
 
-.article hr {
-    border-top: 1.5px solid rgb(135, 135, 135);
-    margin-top: 3rem;
-}
-
 .article {
     grid-column: 2;
     opacity: 1;
@@ -96,12 +91,19 @@
 
 .articlesubcard {
     position: relative;
-    top: 0;
+    /* top: 0;
     left: 0;
-    padding-right: 100px;
+    padding-right: 100px; */
     vertical-align: top;
     display: flex;
     flex-direction: column;
+}
+
+.articlesubcard p {
+    font-style: italic;
+    font-family: var(--font-secondary);
+    line-height: 1.4;
+    font-size: 1rem;
 }
 
 .articlecardimage {

@@ -40,7 +40,7 @@ export default function Page({ allPostsData }) {
                                 <h1 className={styles.blogtitle}>Blog</h1>
                             </div>
                             <Line />
-                            {allPostsDataPublished.map(({ id, title, date, image }) => (
+                            {allPostsDataPublished.map(({ id, title, date, image, desc }) => (
                                 <div key={id}>
                                     <Link href={`/blog/${id}`}>
                                         <div className={styles.articlecard} styles={{minHeight: '200px'}}>
@@ -50,11 +50,12 @@ export default function Page({ allPostsData }) {
                                                 <small>
                                                     <Date dateString={date} />
                                                 </small>
+                                                <p>{desc}</p>
                                             </div>
-
-                                                <div className={styles.articlecardimage}>
-                                                    {image && <Image src={image} alt="Ben Everman" height={100} width={100} />}
-                                                </div>
+                                            {/* IF I WANT AN IMAGE USE CODE BELOW */}
+                                            {/* <div className={styles.articlecardimage}>
+                                                {image && <Image src={image} alt="Ben Everman" height={100} width={100} />}
+                                            </div> */}
                                         </div>
                                     </Link>
                                     <Line />

@@ -1,6 +1,7 @@
 ---
 title: 'What Is This Blog?'
 date: '2022-07-14'
+desc: '"When writing, I was forced to take my raw thoughts and ideas and put them in a polished form that others could read and understand. That process forced me to cultivate and nurture my ideas, growing them into something better."'
 ---
 
 When I applied for graduate social work programs, each required a 6-page statement of purpose that included a statement of intent and how one would address complex social issues.

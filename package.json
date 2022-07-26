@@ -37,6 +37,7 @@
     "rehype-image-size": "^1.0.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
+    "remark-mdx": "^2.1.2",
     "three": "^0.142.0",
     "typewriter-effect": "^2.18.2"
   },
