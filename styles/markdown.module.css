@@ -4,6 +4,7 @@
     display: inline-block;
     position: relative;
     color: var(--link-color-lm);
+    word-break: break-word;
 }
 
 .markdown a:hover {
@@ -26,4 +27,10 @@
 .markdown a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.markdown p {
+    margin: 2rem 0;
+    font-family: var(--font-secondary);
+    letter-spacing: .01rem;
 }

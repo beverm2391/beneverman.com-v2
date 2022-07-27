@@ -15,12 +15,6 @@
     max-width: 925px;
 }
 
-.ppcontainer p {
-    margin: 2rem 0;
-    font-family: var(--font-secondary);
-    letter-spacing: .01rem;
-}
-
 /* use this to adjust the height between the title and the content, when there is no image */
 .spacer {
     height: 3rem;

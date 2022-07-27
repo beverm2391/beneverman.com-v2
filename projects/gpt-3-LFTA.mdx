@@ -9,25 +9,51 @@ skills: "Development"
 tools: "GPT-3, Python"
 ---
 
-*update 7/5 - I've written up an outline for what this project write-up will cover, within the next few days I'll flesh out the full write-up.*
-
-## Where did the idea come from?
+*update 7/25 - I've written up an outline for what this project write-up will cover, within the next few days I'll flesh out the full write-up.*
 
 #### Overwhelmed By Schoolwork
-#### What is GPT-3? - How I Got Started
+
+At the time of writing this, I am a full-time graduate student. With the shift from synchronous to asynchronous learning, I have a considerable amount of required textbook and article reading for each of my classes. 
+
+About a year ago, I learned about an AI called [GPT-3](https://openai.com/blog/gpt-3-apps/) that could perform [natural language processing](https://www.ibm.com/cloud/learn/natural-language-processing). Essentially, NLP uses a machine learning model to [tokenize](https://www.analyticsvidhya.com/blog/2020/05/what-is-tokenization-nlp/) text into data that can be manipulated and analyzed. Unlike completing numerical calculations, which can be easily automated and optimized, completing schoolwork requires understanding of natural language, which makes things more difficult. 
+
+**With GPT-3, however, I could use NLP to simulate processes like reading and synthesizing information, generating questions/ideas, responding to discussion questions, summarizing text, and so on.**
 
 ## What can the application do (in its current state)?
-#### Use Case Continuum
-#### What it's good at, what its bad at.
+
+This applicaion, which I call LFTA (long form text analysis) is focues on working with long blocks of text, like articles or textbook chapters. **It's currently set up to be able to pull out key concepts from those blocks of text, and then generate review questions based on those concepts.** I've used it to help me study different required readings for my classes, as well as powerpoint slides.
+
+>*update 7/26 - I'm currently working on packaging the core python script into a web application so others can use it! Bookmark this page and come back later for updates.*
+
+I also built the architecture in such a way that I can pretty easily adapt it to other use cases. Speaking of use cases, here' a graphic I put together that describes what the application is good for, okay at, and bad for.
+
+### Task Perfomance
+![Task Performance](/images/projects/gpt-3-LFTA/task-performance.jpg)
+
+### Use Cases/Buyer Personas
+
+
+
+1. Raj is an college student studying organic chemisty. While his friends write flashcards by hand, **he uploads the chapter slides and uses GPT-3 LFTA to generate a list of all relevant molecules mentioned in the slides, along with links to their wikipedia page and a review questions for each.**
+
+2. Dylan, a high school student, found an interesting journal article on the effects of COVID-19. The article contains jargon and phrases that are difficult to understand. So, Dylan asks GPGT-3 LFTA to **rewrite the article to a high school reading level**. Now, Dylan can 
+
+3. Dan is a middle school teacher who is behind on his weekly tasks. Every week, Dan has to must write assessments, study guides, a review kahoot, and short answer prompts. Instead of starting from scratch, **he uploads chapter learning objectives and asks GPT-3 LFTA to generate outlines for both study guides and assessents.** GPT-3 LFTA then generates a set review questions based on core ideas from the chapter.
+
+4. Sasha, an internal medicne doctor, frequently encounters patients who are marginalized by their socioeconomic status, and their lack of access to education. She knows that "The Joint Commission states that PEMs should be written at or below a 5th grade reading level, and encourages hospitals to use readability tests." She uploads a journal abstract and some text from the web and asks GPT-3 LFTA to **explain the core concepts of this text in common language. Also, generate helpful analogies to describe each concept**. 
+
+5. Mary wants to have her students read an article and answer a set of short answer questions, but **she dones't have time to write the questions herself**. Instead, **she uploads a PDF of the article and uses GPT-3 LFTA to generate a question bank. Mary then selects those she likes, modifiying them to fit her needs.** She also needs a thought-provoking question to use as a writing prompt, so she asks GPT-3 to "a set of 4 open-ended discussion questions, based on the core concepts and ideas from the article." Then she picks the one she likes best, modifiying it as needed.
+
+### Buyer personal graphic based on use cases above goes here
 
 **Marketing Class Powerpoint Example**
 
 ![output example](/images/projects/gpt-3-LFTA/output-example.png)
 
 ## How did you build it?
-#### How I learned to use GPT-3
-#### How a simple script evolved over time (refactoring)
-#### Challenges and Roadblocks
+### How I learned to use GPT-3
+### How a simple script evolved over time (refactoring)
+### Challenges and Roadblocks
 
 1. Token Limit
 2. Runtime
